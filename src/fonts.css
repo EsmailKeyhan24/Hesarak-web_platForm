@@ -1,0 +1,30 @@
+@font-face {
+    font-family:Shabnam-Bold;
+    src: url(../public/fonts/Shabnam-Bold.ttf);
+    font-weight:900;
+
+}
+@font-face {
+    font-family:Shabnam-Medium;
+    src: url(../public/fonts/Shabnam-Medium.ttf);
+}
+@font-face {
+    font-family:Shabnam-Thin;
+    src: url(../public/fonts/Shabnam-Thin.ttf);
+}
+@font-face {
+    font-family:PlaypenSansArabic-ExtraBold;
+    src: url(../public/fonts/PlaypenSansArabic-ExtraBold.ttf);
+}
+@font-face {
+    font-family:PlaypenSansArabic-Bold;
+    src: url(../public/fonts/PlaypenSansArabic-Bold.ttf);
+}
+@font-face {
+    font-family:PlaypenSansArabic-Medium;
+    src: url(../public/fonts/PlaypenSansArabic-Medium.ttf);
+}
+@font-face {
+    font-family:PlaypenSansArabic-Light;
+    src: url(../public/fonts/PlaypenSansArabic-Light.ttf);
+}

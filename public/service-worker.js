@@ -1,7 +1,11 @@
 const staticCacheName = "site-static-v1";
 const cacheAssets = [
     "/",
-    "../src/index.css",
+  "/index.html",
+  "/manifest.json",
+  "/icon-sm.png",
+  "/icon-lg.png",
+
 ];
 self.addEventListener("install", evt => {
     evt.waitUntil(
@@ -22,9 +26,11 @@ self.addEventListener("fetch", evt => {
                 return res || fetch(evt.request);
             })
             .catch(err => {
-                if (evt.request.url.indexOf(".html") > -1) {
+                if (evt.request.url.endsWith(".html")-1) {
                     return caches.match("./index.html");
                 }
             })
     );
 });
+
+
