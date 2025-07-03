@@ -17,7 +17,7 @@ module.exports = {
         vazir: ['Vazir', 'sans-serif'], 
         ShabnamBold:['Shabnam-Bold'],
         ShabnamMedium:['Shabnam-Medium'],
-        ShabnamThin:['Shabnam-Thin'],
+        ShabnamLight:['Shabnam-Light'],
         PlaypenExtraBold:['PlaypenSansArabic-ExtraBold'],
         PlaypenBold:['PlaypenSansArabic-Bold'],
         PlaypenMedium:['PlaypenSansArabic-Medium'],
