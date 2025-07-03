@@ -10,7 +10,8 @@ module.exports = {
         secondary: '#F59E0B', // زرد سفارشی
         YellowGreen: '#97d700',    // قرمز
         DarkGray:"#333",
-        white:"#fff"
+        white:"#fff",
+        lightGray:"#f3f4f6"
       },
       fontFamily: {
         vazir: ['Vazir', 'sans-serif'], 

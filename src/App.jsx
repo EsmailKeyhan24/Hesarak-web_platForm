@@ -6,7 +6,7 @@ import Contact from "./pages/contact";
 import Tickets from './pages/tickets'
 import Blog from "./pages/blog";
 import Login from "./pages/login";
-import Register from "./pages/regester";
+import Regester from "./pages/regester";
 // import Footer from "./components/footer";
 export default function App(){
   return(
@@ -20,7 +20,7 @@ export default function App(){
             <Route path="/tickets" element={<Tickets />}></Route>
             <Route path="/blog" element={<Blog />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
+            <Route path="/register" element={<Regester />} />
         </Routes>
     </main>
   )

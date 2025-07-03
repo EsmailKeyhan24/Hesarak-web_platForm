@@ -71,7 +71,7 @@ export default function Header() {
     }
 
     return (
-        <header className="w-full min-h-[200px]">
+        <header className="w-full bg-[red]">
             <nav className="w-full h-[65px] bg-[#f8f9fa] px-[20px]">
                 {/* MENU for LG */}
                 {/* __________________MENU___LG________ */}
@@ -92,7 +92,7 @@ export default function Header() {
                             </button>
                         )}
                         <div>
-                            <Link to="/" className="font-PlaypenMedium text-[13px] text-DarkGray   py-[7px] px-[14px]  rounded-[100px] flex items-center transition duration-300 ease-in-out hover:bg-[#F3F4F6] "> <span className="text-[20px] ml-[10px]"><BsBoxArrowInLeft /></span> ثبت نام  یا ورود</Link>
+                            <Link to="/login" className="font-PlaypenMedium text-[13px] text-DarkGray   py-[7px] px-[14px]  rounded-[100px] flex items-center transition duration-300 ease-in-out hover:bg-[#F3F4F6] "> <span className="text-[20px] ml-[10px]"><BsBoxArrowInLeft /></span> ثبت نام  یا ورود</Link>
                         </div>
                     </section>
                 </div>
@@ -114,6 +114,9 @@ export default function Header() {
                             <li className="text-[#fff] text-[15px] font-PlaypenMedium w-full h-[45px] border-b border-[#f8f8f8]"><Link className="flex w-full h-full items-center " to="/tickets">بوک کردن تکت</Link></li>
                             <li className="text-[#fff] text-[15px] font-PlaypenMedium w-full h-[45px] border-b border-[#f8f8f8]"><Link className="flex w-full h-full items-center " to="/blog">بلاگ</Link></li>
                             <li className="text-[#fff] text-[15px] font-PlaypenMedium w-full h-[45px] border-b border-[#f8f8f8]"><Link className="flex w-full h-full items-center " to="/contact">ارتباط با ما</Link></li>
+                            <li className="text-[#fff] text-[15px] font-PlaypenMedium w-full h-[45px] border-b border-[#f8f8f8] flex items-center">
+                                <Link to="/login" className="text-[13px]"> <span className="text-[20px] ml-[10px]"><BsBoxArrowInLeft />
+                            </span> ثبت نام  یا ورود</Link></li>
                         </ul>
                         <div className="w-full h-[60px] mt-[40px] flex justify-center items-center gap-[10px] text-[25px] text-[#fff]">
                             <a href="https://www.facebook.com/FrontWebAcademy" target="_blank" rel="noopener noreferrer">
