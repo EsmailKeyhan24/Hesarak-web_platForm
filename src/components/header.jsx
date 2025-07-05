@@ -5,8 +5,9 @@ import { MdInstallDesktop } from "react-icons/md";
 import { PiListBold } from "react-icons/pi";
 import { FaCircleUser, FaFacebook, FaSquareWhatsapp } from "react-icons/fa6";
 import { IoMdClose } from "react-icons/io";
-import { ImTelegram } from "react-icons/im";
+import { ImOffice, ImTelegram } from "react-icons/im";
 import { FaInstagramSquare } from "react-icons/fa";
+import Logo from '../assets/image/logo192.png'
 
 
 
@@ -85,7 +86,8 @@ export default function Header() {
                 {/* MENU for LG */}
                 {/* __________________MENU___LG________ */}
                 <div className="container mx-auto h-full  items-center justify-between hidden lg:flex">
-                    <strong className="font-PlaypenExtraBold text-DarkGray"> <Link to="/">حـصارک پنجشِیـر</Link> </strong>
+                    {/* <strong className="font-PlaypenExtraBold text-DarkGray"> <Link to="/">حـصارک پنجشِیـر</Link> </strong> */}
+                    <a href="#"><img src={Logo} className="w-[50px] h-[50px] rounded-[50%]" alt="لوگوی حصارک پنجشیر" /></a>
 
                     <ul className="flex h-full items-center">
                         <li className="h-full  text-DarkGray px-[15px] font-PlaypenMedium"><Link className="h-full flex items-center" to="/">صفحه اصلی</Link></li>

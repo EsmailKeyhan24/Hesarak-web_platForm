@@ -1,8 +1,9 @@
 import React from "react"
+import BannerHeader from "../components/bannerHeader"
 
 export default function Home(){
     return(
-        <h2>This is Home page</h2>
+        <BannerHeader />
     )
 }
 
