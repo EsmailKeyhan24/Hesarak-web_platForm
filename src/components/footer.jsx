@@ -19,7 +19,7 @@ import { FaSquareWhatsapp } from "react-icons/fa6";
 
 export default function Footer() {
     return (
-        <footer className="w-full min-h-[120px] bg-DarkGray py-[50px]">
+        <footer className="w-full min-h-[120px] bg-[#1f2c30] py-[50px]">
             <div className="container text-light mx-auto">
 
                 <section className="w-full grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -113,3 +113,4 @@ export default function Footer() {
         </footer>
     )
 }
+
