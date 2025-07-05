@@ -70,6 +70,15 @@ export default function Header() {
         }
     }
 
+
+    // __________________________CLOSE____menuToggle___To___Phone_State__
+    const _liMenu=document.querySelectorAll('#menuToggle>ul>li')
+    _liMenu.forEach((li)=>{
+        li.addEventListener('click' , ()=>{
+            document.getElementById('menuToggle').style.right='-400px'
+        })
+    })
+
     return (
         <header className="w-full bg-[red]">
             <nav className="w-full h-[65px] bg-[#f8f9fa] px-[20px]">
@@ -102,10 +111,10 @@ export default function Header() {
                 <div className="h-full flex items-center lg:hidden justify-between relative">
                     <span className="cursor-pointer text-[30px]" onClick={handleMenu} id="Toggle" ref={toggleRef}><PiListBold /></span>
                     <strong className="text-[20px] font-PlaypenBold"><Link to="/">حـصارک پنجشِیـر</Link></strong>
-                    <span className="cursor-pointer text-[30px]"><FaCircleUser /></span>
+                    <span className="cursor-pointer text-[30px] "><Link to="/login"><FaCircleUser /></Link></span>
 
                     {/* ============NAVBAR========== */}
-                    <nav className="w-[400px] h-[100vh] bg-[#1f2c30] fixed top-0 right-[-400px] transition-all duration-300 ease-linear flex flex-wrap justify-end content-start px-[20px] py-[20px]" id="menuToggle" ref={menuToggleRef}>
+                    <nav className="w-[400px] h-[100vh] bg-[#1f2c30] fixed top-0 right-[-400px] transition-all duration-300 ease-linear flex flex-wrap justify-end content-start px-[20px] py-[20px] z-[99999]" id="menuToggle" ref={menuToggleRef}>
                         {/* ========BTN====CLose====NAVBAR======= */}
                         <span className="flex w-[40px] h-[40px] items-center justify-center cursor-pointer border rounded-[4px] text-[#fff] text-[25px]" onClick={closeNavbar}><IoMdClose /></span>
                         <ul className="w-full mt-[20px]">
@@ -115,8 +124,10 @@ export default function Header() {
                             <li className="text-[#fff] text-[15px] font-PlaypenMedium w-full h-[45px] border-b border-[#f8f8f8]"><Link className="flex w-full h-full items-center " to="/blog">بلاگ</Link></li>
                             <li className="text-[#fff] text-[15px] font-PlaypenMedium w-full h-[45px] border-b border-[#f8f8f8]"><Link className="flex w-full h-full items-center " to="/contact">ارتباط با ما</Link></li>
                             <li className="text-[#fff] text-[15px] font-PlaypenMedium w-full h-[45px] border-b border-[#f8f8f8] flex items-center">
-                                <Link to="/login" className="text-[13px]"> <span className="text-[20px] ml-[10px]"><BsBoxArrowInLeft />
-                            </span> ثبت نام  یا ورود</Link></li>
+                                <Link to="/login" className="text-[13px] flex h-full items-center">
+                                 <span className="text-[20px] ml-[10px]"><BsBoxArrowInLeft />
+                                </span> ثبت نام  یا ورود</Link>
+                            </li>
                         </ul>
                         <div className="w-full h-[60px] mt-[40px] flex justify-center items-center gap-[10px] text-[25px] text-[#fff]">
                             <a href="https://www.facebook.com/FrontWebAcademy" target="_blank" rel="noopener noreferrer">
