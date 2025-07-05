@@ -7,12 +7,11 @@ import Tickets from './pages/tickets'
 import Blog from "./pages/blog";
 import Login from "./pages/login";
 import Regester from "./pages/regester";
-// import Footer from "./components/footer";
+import Footer from "./components/footer";
 export default function App(){
   return(
     <main>
       <Header />
-      {/* <Footer /> */}
         <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/about" element={<About />}></Route>
@@ -22,6 +21,7 @@ export default function App(){
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Regester />} />
         </Routes>
+        <Footer />
     </main>
   )
 }

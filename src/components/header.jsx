@@ -5,7 +5,7 @@ import { MdInstallDesktop } from "react-icons/md";
 import { PiListBold } from "react-icons/pi";
 import { FaCircleUser, FaFacebook, FaSquareWhatsapp } from "react-icons/fa6";
 import { IoMdClose } from "react-icons/io";
-import { ImOffice, ImTelegram } from "react-icons/im";
+import {  ImTelegram } from "react-icons/im";
 import { FaInstagramSquare } from "react-icons/fa";
 import Logo from '../assets/image/logo192.png'
 

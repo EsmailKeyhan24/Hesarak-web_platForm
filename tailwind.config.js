@@ -11,7 +11,8 @@ module.exports = {
         YellowGreen: '#97d700',    // قرمز
         DarkGray:"#333",
         white:"#fff",
-        lightGray:"#f3f4f6"
+        lightGray:"#f3f4f6",
+        light:"#f8f9fa",
       },
       fontFamily: {
         vazir: ['Vazir', 'sans-serif'], 

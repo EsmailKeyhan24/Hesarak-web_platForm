@@ -17,4 +17,11 @@ body{
           inset -10px -10px 10px rgba(255, 255, 255, 0.2),
           inset 15px 15px 15px rgba(0, 0, 0, 0.1);
       }
+    .custom-neomorphic-shadow_social {
+        box-shadow: 
+          -3px -3px 7px #f3f4f633,
+          1px 1px 5px #ceced1;
+          /* inset -7px -7px 10px rgba(255, 255, 255, 0.2),
+          inset 15px 15px 15px rgba(0, 0, 0, 0.1); */
+      }
 }
