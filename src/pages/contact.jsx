@@ -20,8 +20,8 @@ export default function Contact(){
 function Map(){
     return(
         <div className="lg:w-[70%] border mx-auto h-[350px]">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13146.41279005968!2d69.1446149!3d34.5382799!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38d16f70c9593667%3A0x4eb6762902bb0720!2sFrontWe!5e0!3m2!1sfa!2s!4v1711180698531!5m2!1sfa!2s"
-                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe className="w-full h-full" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13146.41279005968!2d69.1446149!3d34.5382799!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38d16f70c9593667%3A0x4eb6762902bb0720!2sFrontWe!5e0!3m2!1sfa!2s!4v1711180698531!5m2!1sfa!2s"
+                         loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     )
 }
@@ -33,11 +33,11 @@ function ContactAbout(){
             <span className="font-ShabnamMedium">اطـلاعات تـماس دفـترمـرکـزی و نـمایـندگــی هــا</span>
 
             {/* =========Cards================ */}
-            <div className="w-full flex flex-wrap py-[40px]">
+            <div className="w-full flex flex-wrap py-[40px] justify-between">
 
 
                 {/* ________________Section______One____________ */}
-                <section className="w-full sm:w-[50%] md:w-[33.33%] lg:w-[25%]  mt-[20px]">
+                <section className="w-full sm:w-[50%] md:w-[30%] p-[12px]  mt-[20px] border-b">
                     <h5 className="font-ShabnamBold">دفـترمـرکـزی</h5>
                     <ul className="w-full mt-[20px]">
                         <li>
@@ -62,7 +62,7 @@ function ContactAbout(){
 
 
                 {/* _______________________Section_____________Tow____________ */}
-                <section className="w-full sm:w-[50%] md:w-[33.33%] lg:w-[25%]  mt-[20px]">
+                <section className="w-full sm:w-[50%] md:w-[30%]  mt-[20px] px-[10px] border-b">
                 <h5 className="font-ShabnamBold text-[15px]">نمایندگی ولایت سمنگان </h5>
                     <ul className="w-full mt-[20px]">
                         <li>
@@ -83,7 +83,7 @@ function ContactAbout(){
 
 
                 {/* _________________Section_______________Three________________ */}
-                <section className="w-full sm:w-[50%] md:w-[33.33%] lg:w-[25%]  mt-[20px]">
+                <section className="w-full sm:w-[50%] md:w-[30%]  mt-[20px] border-b">
                 <h5 className="font-ShabnamBold text-[15px]">نمایندگی مزار شریف</h5>
                     <ul className="w-full mt-[20px]">
                         <li>
@@ -118,14 +118,13 @@ function ContactAbout(){
 
 
                 {/* _____________________section____________Foure________________ */}
-                <section className="w-full sm:w-[50%] md:w-[33.33%] lg:w-[25%]  mt-[20px]">
+                <section className="w-full sm:w-[50%] md:w-[30%]  mt-[20px] border-b">
                 <h5 className="font-ShabnamBold text-[15px]">نمایندگی آقچه</h5>
                     <ul className="w-full mt-[20px]">
                         <li>
                             <p className="font-ShabnamLight text-[14px] font-black">شماره تماس </p>
                             <div className="w-full">
-                                <a href="tel:93۷۹۶۰۰۵۰۸۵">0000000000</a> /
-                                <a href="tel:93۷۷۵۴۰۰۷۶۲">0000000000</a>
+                                <a href="tel:93۷۹۱۸۵۸۵۸۰">۰۷۹۱۸۵۸۵۸۰</a>
                             </div>
                         </li>
 
@@ -140,7 +139,7 @@ function ContactAbout(){
 
 
                  {/* _____________________section____________Five________________ */}
-                 <section className="w-full sm:w-[50%] md:w-[33.33%] lg:w-[25%]  mt-[20px]">
+                 <section className="w-full sm:w-[50%] md:w-[30%]  mt-[20px] border-b">
                 <h5 className="font-ShabnamBold text-[15px]">نمایندگی جوزجان</h5>
                     <ul className="w-full mt-[20px]">
                         <li>
@@ -164,7 +163,7 @@ function ContactAbout(){
 
 
                  {/* _____________________section____________Sixe________________ */}
-                 <section className="w-full sm:w-[50%] md:w-[33.33%] lg:w-[25%]  mt-[20px]">
+                 <section className="w-full sm:w-[50%] md:w-[30%]  mt-[20px] md:px-[15px] border-b">
                 <h5 className="font-ShabnamBold text-[15px]">نمایندگی اندخوی </h5>
                     <ul className="w-full mt-[20px]">
                         <li>
@@ -187,7 +186,7 @@ function ContactAbout(){
 
 
                  {/* _____________________section____________Siven  ________________ */}
-                 <section className="w-full sm:w-[50%] md:w-[33.33%] lg:w-[25%]  mt-[20px]">
+                 <section className="w-full sm:w-[50%] md:w-[30%] mt-[20px] md:px-[15px] border-b">
                 <h5 className="font-ShabnamBold text-[15px]">نمایندگی ولایت فاریاب</h5>
                     <ul className="w-full mt-[20px]">
                         <li>
@@ -211,7 +210,7 @@ function ContactAbout(){
 
 
                 {/* _____________________section____________Ethe  ________________ */}
-                <section className="w-full sm:w-[50%] md:w-[33.33%] lg:w-[25%]  mt-[20px]">
+                <section className="w-full sm:w-[50%] md:w-[30%]  mt-[20px] md:px-[15px] border-b">
                 <h5 className="font-ShabnamBold text-[15px]">نمایندگی ولایت سرپل</h5>
                     <ul className="w-full mt-[20px]">
                         <li>
@@ -234,7 +233,7 @@ function ContactAbout(){
 
 
               {/* _____________________section____________Nine ________________   */}
-                <section className="w-full sm:w-[50%] md:w-[33.33%] lg:w-[25%]  mt-[20px]">
+                <section className="w-full sm:w-[50%] md:w-[30%] mt-[20px] md:px-[15px] border-b">
                 <h5 className="font-ShabnamBold text-[15px]">نمایندگی ولایت کندز</h5>
                     <ul className="w-full mt-[20px]">
                         <li>
@@ -256,7 +255,7 @@ function ContactAbout(){
 
 
                  {/* _____________________section____________Teen ________________   */}
-                 <section className="w-full sm:w-[50%] md:w-[33.33%] lg:w-[25%]  mt-[20px]">
+                 <section className="w-full sm:w-[50%] md:w-[30%] mt-[20px] md:px-[15px] border-b">
                 <h5 className="font-ShabnamBold text-[15px]">نمایندگی ولایت تخار</h5>
                     <ul className="w-full mt-[20px]">
                         <li>
@@ -279,7 +278,7 @@ function ContactAbout(){
 
 
                  {/* _____________________section____________11 ________________   */}
-                 <section className="w-full sm:w-[50%] md:w-[33.33%] lg:w-[25%]  mt-[20px]">
+                 <section className="w-full sm:w-[50%] md:w-[30%]  mt-[20px] md:px-[15px] border-b">
                 <h5 className="font-ShabnamBold text-[15px]">نمایندگی والسوالی خواجه غار</h5>
                     <ul className="w-full mt-[20px]">
                         <li>
@@ -303,7 +302,7 @@ function ContactAbout(){
 
 
                 {/* _____________________section____________11 ________________   */}
-                <section className="w-full sm:w-[50%] md:w-[33.33%] lg:w-[25%]  mt-[20px]">
+                <section className="w-full sm:w-[50%] md:w-[30%]  mt-[20px] md:px-[15px] border-b">
                 <h5 className="font-ShabnamBold text-[15px]"> نمایندگی والسوالی دشت قلعه</h5>
                     <ul className="w-full mt-[20px]">
                         <li>
@@ -327,7 +326,7 @@ function ContactAbout(){
 
 
                  {/* _____________________section____________12 ________________   */}
-                 <section className="w-full sm:w-[50%] md:w-[33.33%] lg:w-[25%]  mt-[20px]">
+                 <section className="w-full sm:w-[50%] md:w-[30%]  mt-[20px] md:px-[15px] border-b">
                 <h5 className="font-ShabnamBold text-[15px]"> نمایندگی والسوالی ینگی قلعه</h5>
                     <ul className="w-full mt-[20px]">
                         <li>
@@ -351,7 +350,7 @@ function ContactAbout(){
 
 
                  {/* _____________________section____________13 ________________   */}
-                 <section className="w-full sm:w-[50%] md:w-[33.33%] lg:w-[25%]  mt-[20px]">
+                 <section className="w-full sm:w-[50%] md:w-[30%]  mt-[20px] md:px-[15px] border-b">
                 <h5 className="font-ShabnamBold text-[15px]"> نمایندگی والسوالی امام صاحب</h5>
                     <ul className="w-full mt-[20px]">
                         <li>
@@ -375,21 +374,20 @@ function ContactAbout(){
 
 
                 {/* _____________________section____________14 ________________   */}
-                <section className="w-full sm:w-[50%] md:w-[33.33%] lg:w-[25%]  mt-[20px]">
+                <section className="w-full sm:w-[50%] md:w-[30%]  mt-[20px] md:px-[15px] border-b">
                 <h5 className="font-ShabnamBold text-[15px]">نمایندگی کشم </h5>
                     <ul className="w-full mt-[20px]">
                         <li>
                             <p className="font-ShabnamLight text-[14px] font-black">شماره تماس </p>
                             <div className="w-full">
-                                <a href="tel:93۷۰۳۰۳۰۳۵۰ ">000000000000 </a> / 
-                                <a href="tel:93۷۴۹۶۶۶۵۶۵">0000000000</a>
+                                <a href="tel:93۷۹۷۵۰۰۰۷۸ ">۰۷۹۷۵۰۰۰۷۸ </a>
                             </div>
                         </li>
 
                         <li className="mt-[20px]">
                             <p className="font-ShabnamLight text-[14px] font-black">آدرس فیـزیـکـی نمایـندگـی</p>
                             <p className="font-ShabnamLight text-justify">
-                               xxxxxxxxxxxxxxxxxxxxxxxxx
+                                نمایندگی کشم واقع باغ شاروالی
                             </p>
                         </li>
                     </ul>
@@ -398,7 +396,7 @@ function ContactAbout(){
 
 
                 {/* _____________________section____________15 ________________   */}
-                <section className="w-full sm:w-[50%] md:w-[33.33%] lg:w-[25%]  mt-[20px]">
+                <section className="w-full sm:w-[50%] md:w-[30%] mt-[20px] md:px-[15px] border-b">
                 <h5 className="font-ShabnamBold text-[15px]">نمایندگی فیض اباد بدخشان</h5>
                     <ul className="w-full mt-[20px]">
                         <li>
@@ -423,7 +421,7 @@ function ContactAbout(){
 
 
                 {/* _____________________section____________16 ________________   */}
-                <section className="w-full sm:w-[50%] md:w-[33.33%] lg:w-[25%] mt-[20px]">
+                <section className="w-full sm:w-[50%] md:w-[30%] mt-[20px] px-[12px]">
                 <h5 className="font-ShabnamBold text-[15px]">نمایندگی بهارک بدخشان</h5>
                     <ul className="w-full mt-[20px]">
                         <li>
