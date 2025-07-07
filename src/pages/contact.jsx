@@ -1,9 +1,9 @@
 import React  from "react";
 export default function Contact(){
     return(
-        <section className="w-full min-h-[300px] bg-lightGray py-[50px]">
+        <section className="w-full min-h-[300px py-[50px]">
             <div className="container mx-auto flex justify-center flex-wrap">
-                <h1 className="font-ShabnamBold text-[30px] text-center md:text-[50px] w-full">ارتـبـاط بـامــا</h1>
+                <h1 className="font-ShabnamBold text-[30px] text-center w-full"> ارتباط با شرکت ترانسپورتی حصارک پنجشیر</h1>
                 <p className="font-ShabnamLight lg:w-[70%] text-justify mt-[20px]">
                     شرکت ترانسپورتی حصارک پنجشیر با سال‌ها تجربه در زمینه حمل‌ونقل شهری و بین‌شهری، آماده است تا خدماتی مطمئن، سریع و حرفه‌ای را به مشتریان گرامی ارائه نماید.
                     در صورتی که سوال، پیشنهاد، یا انتقادی دارید، خوشحال می‌شویم از طریق یکی از راه‌های زیر با ما در تماس شوید. هدف ما رضایت کامل شماست.
@@ -30,7 +30,7 @@ function Map(){
 function ContactAbout(){
     return(
         <div className="lg:w-[80%] mx-auto mt-[40px]">
-            <span className="font-ShabnamMedium">اطـلاعات تـماس دفـترمـرکـزی و نـمایـندگــی هــا</span>
+            <h2 className="font-ShabnamMedium">اطـلاعات تـماس دفـترمـرکـزی و نـمایـندگــی هــا</h2>
 
             {/* =========Cards================ */}
             <div className="w-full flex flex-wrap py-[40px] justify-between">
@@ -38,13 +38,13 @@ function ContactAbout(){
 
                 {/* ________________Section______One____________ */}
                 <section className="w-full sm:w-[50%] md:w-[30%] p-[12px]  mt-[20px] border-b">
-                    <h5 className="font-ShabnamBold">دفـترمـرکـزی</h5>
+                    <h3 className="font-ShabnamBold">دفـترمـرکـزی</h3>
                     <ul className="w-full mt-[20px]">
                         <li>
                             <p className="font-ShabnamLight text-[14px] font-black">شماره تماس دفتر مرکزی</p>
                             <div className="w-full">
-                                <a href="tel:93700000000">93700000000</a> /
-                                <a href="tel:93700000000">93700000000</a>
+                                <a href="tel:+93700000000">93700000000</a> /
+                                <a href="tel:+93700000000">93700000000</a>
                             </div>
                         </li>
                         <li className="mt-[20px]">
@@ -63,13 +63,13 @@ function ContactAbout(){
 
                 {/* _______________________Section_____________Tow____________ */}
                 <section className="w-full sm:w-[50%] md:w-[30%]  mt-[20px] px-[10px] border-b">
-                <h5 className="font-ShabnamBold text-[15px]">نمایندگی ولایت سمنگان </h5>
+                <h3 className="font-ShabnamBold text-[15px]">نمایندگی ولایت سمنگان </h3>
                     <ul className="w-full mt-[20px]">
                         <li>
                             <p className="font-ShabnamLight text-[14px] font-black">شماره تماس </p>
                             <div className="w-full">
-                                <a href="tel:93۷۹۶۰۰۵۰۸۵">۰۷۹۶۰۰۵۰۸۵</a> /
-                                <a href="tel:93۷۷۵۴۰۰۷۶۲">۰۷۷۵۴۰۰۷۶۲</a>
+                                <a href="tel:+93۷۹۶۰۰۵۰۸۵">۰۷۹۶۰۰۵۰۸۵</a> /
+                                <a href="tel:+93۷۷۵۴۰۰۷۶۲">۰۷۷۵۴۰۰۷۶۲</a>
                             </div>
                         </li>
                         <li className="mt-[20px]">
@@ -84,13 +84,13 @@ function ContactAbout(){
 
                 {/* _________________Section_______________Three________________ */}
                 <section className="w-full sm:w-[50%] md:w-[30%]  mt-[20px] border-b">
-                <h5 className="font-ShabnamBold text-[15px]">نمایندگی مزار شریف</h5>
+                <h3 className="font-ShabnamBold text-[15px]">نمایندگی مزار شریف</h3>
                     <ul className="w-full mt-[20px]">
                         <li>
                             <p className="font-ShabnamLight text-[14px] font-black">شماره تماس </p>
                             <div className="w-full">
-                                <a href="tel:93۷۹۶۰۰۵۰۸۵">۰۷۹۶۰۰۵۰۸۵</a> /
-                                <a href="tel:93۷۷۵۴۰۰۷۶۲">۰۷۷۵۴۰۰۷۶۲</a>
+                                <a href="tel:+93۷۹۶۰۰۵۰۸۵">۰۷۹۶۰۰۵۰۸۵</a> /
+                                <a href="tel:+93۷۷۵۴۰۰۷۶۲">۰۷۷۵۴۰۰۷۶۲</a>
                             </div>
                         </li>
 
@@ -102,15 +102,15 @@ function ContactAbout(){
                                 1- دروازه جمهوری مقابل پارک افغان ترک      
                             </p>
                             <div>
-                                <a href="tel:93۷۹۹۳۸۳۸۷۱">۰۷۹۹۳۸۳۸۷۱</a> /
-                                <a href="tel:93۷۹۲۶۰۳۰۳۰">۰۷۹۲۶۰۳۰۳۰</a>
+                                <a href="tel:+93۷۹۹۳۸۳۸۷۱">۰۷۹۹۳۸۳۸۷۱</a> /
+                                <a href="tel:+93۷۹۲۶۰۳۰۳۰">۰۷۹۲۶۰۳۰۳۰</a>
                             </div>
                             <p className="font-ShabnamLight text-justify">
                                 2- دروازه بلخ عقب مارکیت کفایت
                             </p>
                             <div>
-                                <a href="tel:93۷۹۵۰۰۵۱۱۵">۰۷۹۵۰۰۵۱۱۵</a> /
-                                <a href="tel:92۷۸۶۳۰۹۴۰۹">۰۷۸۶۳۰۹۴۰۹</a>
+                                <a href="tel:+93۷۹۵۰۰۵۱۱۵">۰۷۹۵۰۰۵۱۱۵</a> /
+                                <a href="tel:+92۷۸۶۳۰۹۴۰۹">۰۷۸۶۳۰۹۴۰۹</a>
                             </div>
                         </li>
                     </ul>
@@ -119,12 +119,12 @@ function ContactAbout(){
 
                 {/* _____________________section____________Foure________________ */}
                 <section className="w-full sm:w-[50%] md:w-[30%]  mt-[20px] border-b">
-                <h5 className="font-ShabnamBold text-[15px]">نمایندگی آقچه</h5>
+                <h3 className="font-ShabnamBold text-[15px]">نمایندگی آقچه</h3>
                     <ul className="w-full mt-[20px]">
                         <li>
                             <p className="font-ShabnamLight text-[14px] font-black">شماره تماس </p>
                             <div className="w-full">
-                                <a href="tel:93۷۹۱۸۵۸۵۸۰">۰۷۹۱۸۵۸۵۸۰</a>
+                                <a href="tel:+93۷۹۱۸۵۸۵۸۰">۰۷۹۱۸۵۸۵۸۰</a>
                             </div>
                         </li>
 
@@ -140,13 +140,13 @@ function ContactAbout(){
 
                  {/* _____________________section____________Five________________ */}
                  <section className="w-full sm:w-[50%] md:w-[30%]  mt-[20px] border-b">
-                <h5 className="font-ShabnamBold text-[15px]">نمایندگی جوزجان</h5>
+                <h3 className="font-ShabnamBold text-[15px]">نمایندگی جوزجان</h3>
                     <ul className="w-full mt-[20px]">
                         <li>
                             <p className="font-ShabnamLight text-[14px] font-black">شماره تماس </p>
                             <div className="w-full">
-                                <a href="tel:94۰۷۹۷۵۰۰۰۵۶">۰۷۹۷۵۰۰۰۵۶</a> / 
-                                <a href="tel:93۰۷۸۱۴۳۰۷۰۷">۰۷۸۱۴۳۰۷۰۷</a>
+                                <a href="tel:+94۰۷۹۷۵۰۰۰۵۶">۰۷۹۷۵۰۰۰۵۶</a> / 
+                                <a href="tel:+93۰۷۸۱۴۳۰۷۰۷">۰۷۸۱۴۳۰۷۰۷</a>
                             </div>
                         </li>
 
@@ -164,13 +164,13 @@ function ContactAbout(){
 
                  {/* _____________________section____________Sixe________________ */}
                  <section className="w-full sm:w-[50%] md:w-[30%]  mt-[20px] md:px-[15px] border-b">
-                <h5 className="font-ShabnamBold text-[15px]">نمایندگی اندخوی </h5>
+                <h3 className="font-ShabnamBold text-[15px]">نمایندگی اندخوی </h3>
                     <ul className="w-full mt-[20px]">
                         <li>
                             <p className="font-ShabnamLight text-[14px] font-black">شماره تماس </p>
                             <div className="w-full">
-                                <a href="tel:93۷۹۶۲۱۰۲۶۰">۰۷۹۶۲۱۰۲۶۰</a> / 
-                                <a href="tel:93۷۸۰۸۴۱۳۱۳">۰۷۸۰۸۴۱۳۱۳</a>
+                                <a href="tel:+93۷۹۶۲۱۰۲۶۰">۰۷۹۶۲۱۰۲۶۰</a> / 
+                                <a href="tel:+93۷۸۰۸۴۱۳۱۳">۰۷۸۰۸۴۱۳۱۳</a>
                             </div>
                         </li>
 
@@ -187,13 +187,13 @@ function ContactAbout(){
 
                  {/* _____________________section____________Siven  ________________ */}
                  <section className="w-full sm:w-[50%] md:w-[30%] mt-[20px] md:px-[15px] border-b">
-                <h5 className="font-ShabnamBold text-[15px]">نمایندگی ولایت فاریاب</h5>
+                <h3 className="font-ShabnamBold text-[15px]">نمایندگی ولایت فاریاب</h3>
                     <ul className="w-full mt-[20px]">
                         <li>
                             <p className="font-ShabnamLight text-[14px] font-black">شماره تماس </p>
                             <div className="w-full">
-                                <a href="tel:93۷۹۷۵۰۰۰۹۵">۰۷۹۷۵۰۰۰۹۵</a> / 
-                                <a href="tel:93۷۹۷۵۰۰۰۹۴">۰۷۹۷۵۰۰۰۹۴</a>
+                                <a href="tel:+93۷۹۷۵۰۰۰۹۵">۰۷۹۷۵۰۰۰۹۵</a> / 
+                                <a href="tel:+93۷۹۷۵۰۰۰۹۴">۰۷۹۷۵۰۰۰۹۴</a>
                             </div>
                         </li>
 
@@ -211,13 +211,13 @@ function ContactAbout(){
 
                 {/* _____________________section____________Ethe  ________________ */}
                 <section className="w-full sm:w-[50%] md:w-[30%]  mt-[20px] md:px-[15px] border-b">
-                <h5 className="font-ShabnamBold text-[15px]">نمایندگی ولایت سرپل</h5>
+                <h3 className="font-ShabnamBold text-[15px]">نمایندگی ولایت سرپل</h3>
                     <ul className="w-full mt-[20px]">
                         <li>
                             <p className="font-ShabnamLight text-[14px] font-black">شماره تماس </p>
                             <div className="w-full">
-                                <a href="tel:93۷۹۷۵۰۰۰۶۲">۰۷۹۷۵۰۰۰۶۲</a> / 
-                                <a href="tel:93۷۴۹۵۶۴۶۴۶">۰۷۴۹۵۶۴۶۴۶</a>
+                                <a href="tel:+93۷۹۷۵۰۰۰۶۲">۰۷۹۷۵۰۰۰۶۲</a> / 
+                                <a href="tel:+93۷۴۹۵۶۴۶۴۶">۰۷۴۹۵۶۴۶۴۶</a>
                             </div>
                         </li>
 
@@ -234,12 +234,12 @@ function ContactAbout(){
 
               {/* _____________________section____________Nine ________________   */}
                 <section className="w-full sm:w-[50%] md:w-[30%] mt-[20px] md:px-[15px] border-b">
-                <h5 className="font-ShabnamBold text-[15px]">نمایندگی ولایت کندز</h5>
+                <h3 className="font-ShabnamBold text-[15px]">نمایندگی ولایت کندز</h3>
                     <ul className="w-full mt-[20px]">
                         <li>
                             <p className="font-ShabnamLight text-[14px] font-black">شماره تماس </p>
                             <div className="w-full">
-                                <a href="tel:93۰۷۹۷۵۰۰۰۲۹">۰۷۹۷۵۰۰۰۲۹</a>
+                                <a href="tel:+93۰۷۹۷۵۰۰۰۲۹">۰۷۹۷۵۰۰۰۲۹</a>
                             </div>
                         </li>
 
@@ -256,13 +256,13 @@ function ContactAbout(){
 
                  {/* _____________________section____________Teen ________________   */}
                  <section className="w-full sm:w-[50%] md:w-[30%] mt-[20px] md:px-[15px] border-b">
-                <h5 className="font-ShabnamBold text-[15px]">نمایندگی ولایت تخار</h5>
+                <h3 className="font-ShabnamBold text-[15px]">نمایندگی ولایت تخار</h3>
                     <ul className="w-full mt-[20px]">
                         <li>
                             <p className="font-ShabnamLight text-[14px] font-black">شماره تماس </p>
                             <div className="w-full">
-                                <a href="tel:93۷۹۹۵۶۳۲۲۲ ">۰۷۹۹۵۶۳۲۲۲ </a> / 
-                                <a href="tel:93۷۴۷۹۰۹۰۳۰">۰۷۴۷۹۰۹۰۳۰</a>
+                                <a href="tel:+93۷۹۹۵۶۳۲۲۲ ">۰۷۹۹۵۶۳۲۲۲ </a> / 
+                                <a href="tel:+93۷۴۷۹۰۹۰۳۰">۰۷۴۷۹۰۹۰۳۰</a>
                             </div>
                         </li>
 
@@ -279,13 +279,13 @@ function ContactAbout(){
 
                  {/* _____________________section____________11 ________________   */}
                  <section className="w-full sm:w-[50%] md:w-[30%]  mt-[20px] md:px-[15px] border-b">
-                <h5 className="font-ShabnamBold text-[15px]">نمایندگی والسوالی خواجه غار</h5>
+                <h3 className="font-ShabnamBold text-[15px]">نمایندگی والسوالی خواجه غار</h3>
                     <ul className="w-full mt-[20px]">
                         <li>
                             <p className="font-ShabnamLight text-[14px] font-black">شماره تماس </p>
                             <div className="w-full">
-                                <a href="tel:93۷۹۹۴۰۱۴۱۳ ">۰۷۹۹۴۰۱۴۱۳ </a> / 
-                                <a href="tel:93۷۸۰۰۰۰۱۸۰">۰۷۸۰۰۰۰۱۸۰</a>
+                                <a href="tel:+93۷۹۹۴۰۱۴۱۳ ">۰۷۹۹۴۰۱۴۱۳ </a> / 
+                                <a href="tel:+93۷۸۰۰۰۰۱۸۰">۰۷۸۰۰۰۰۱۸۰</a>
                             </div>
                         </li>
 
@@ -303,13 +303,13 @@ function ContactAbout(){
 
                 {/* _____________________section____________11 ________________   */}
                 <section className="w-full sm:w-[50%] md:w-[30%]  mt-[20px] md:px-[15px] border-b">
-                <h5 className="font-ShabnamBold text-[15px]"> نمایندگی والسوالی دشت قلعه</h5>
+                <h3 className="font-ShabnamBold text-[15px]"> نمایندگی والسوالی دشت قلعه</h3>
                     <ul className="w-full mt-[20px]">
                         <li>
                             <p className="font-ShabnamLight text-[14px] font-black">شماره تماس </p>
                             <div className="w-full">
-                                <a href="tel:93۷۰۴۷۴۷۶۷۳ ">۰۷۰۴۷۴۷۶۷۳ </a> / 
-                                <a href="tel:93۷۹۶۰۰۵۰۶۶">۰۷۹۶۰۰۵۰۶۶</a>
+                                <a href="tel:+93۷۰۴۷۴۷۶۷۳ ">۰۷۰۴۷۴۷۶۷۳ </a> / 
+                                <a href="tel:+93۷۹۶۰۰۵۰۶۶">۰۷۹۶۰۰۵۰۶۶</a>
                             </div>
                         </li>
 
@@ -327,13 +327,13 @@ function ContactAbout(){
 
                  {/* _____________________section____________12 ________________   */}
                  <section className="w-full sm:w-[50%] md:w-[30%]  mt-[20px] md:px-[15px] border-b">
-                <h5 className="font-ShabnamBold text-[15px]"> نمایندگی والسوالی ینگی قلعه</h5>
+                <h3 className="font-ShabnamBold text-[15px]"> نمایندگی والسوالی ینگی قلعه</h3>
                     <ul className="w-full mt-[20px]">
                         <li>
                             <p className="font-ShabnamLight text-[14px] font-black">شماره تماس </p>
                             <div className="w-full">
-                                <a href="tel:93۷۰۵۴۰۰۷۴۵ ">۰۷۰۵۴۰۰۷۴۵ </a> / 
-                                <a href="tel:93۷۸۱۷۲۷۲۸۷">۰۷۸۱۷۲۷۲۸۷</a>
+                                <a href="tel:+93۷۰۵۴۰۰۷۴۵ ">۰۷۰۵۴۰۰۷۴۵ </a> / 
+                                <a href="tel:+93۷۸۱۷۲۷۲۸۷">۰۷۸۱۷۲۷۲۸۷</a>
                             </div>
                         </li>
 
@@ -351,13 +351,13 @@ function ContactAbout(){
 
                  {/* _____________________section____________13 ________________   */}
                  <section className="w-full sm:w-[50%] md:w-[30%]  mt-[20px] md:px-[15px] border-b">
-                <h5 className="font-ShabnamBold text-[15px]"> نمایندگی والسوالی امام صاحب</h5>
+                <h3 className="font-ShabnamBold text-[15px]"> نمایندگی والسوالی امام صاحب</h3>
                     <ul className="w-full mt-[20px]">
                         <li>
                             <p className="font-ShabnamLight text-[14px] font-black">شماره تماس </p>
                             <div className="w-full">
-                                <a href="tel:93۷۰۳۰۳۰۳۵۰ ">۰۷۰۳۰۳۰۳۵۰ </a> / 
-                                <a href="tel:93۷۴۹۶۶۶۵۶۵">۰۷۴۹۶۶۶۵۶۵</a>
+                                <a href="tel:+93۷۰۳۰۳۰۳۵۰ ">۰۷۰۳۰۳۰۳۵۰ </a> / 
+                                <a href="tel:+93۷۴۹۶۶۶۵۶۵">۰۷۴۹۶۶۶۵۶۵</a>
                             </div>
                         </li>
 
@@ -375,12 +375,12 @@ function ContactAbout(){
 
                 {/* _____________________section____________14 ________________   */}
                 <section className="w-full sm:w-[50%] md:w-[30%]  mt-[20px] md:px-[15px] border-b">
-                <h5 className="font-ShabnamBold text-[15px]">نمایندگی کشم </h5>
+                <h3 className="font-ShabnamBold text-[15px]">نمایندگی کشم </h3>
                     <ul className="w-full mt-[20px]">
                         <li>
                             <p className="font-ShabnamLight text-[14px] font-black">شماره تماس </p>
                             <div className="w-full">
-                                <a href="tel:93۷۹۷۵۰۰۰۷۸ ">۰۷۹۷۵۰۰۰۷۸ </a>
+                                <a href="tel:+93۷۹۷۵۰۰۰۷۸ ">۰۷۹۷۵۰۰۰۷۸ </a>
                             </div>
                         </li>
 
@@ -397,13 +397,13 @@ function ContactAbout(){
 
                 {/* _____________________section____________15 ________________   */}
                 <section className="w-full sm:w-[50%] md:w-[30%] mt-[20px] md:px-[15px] border-b">
-                <h5 className="font-ShabnamBold text-[15px]">نمایندگی فیض اباد بدخشان</h5>
+                <h3 className="font-ShabnamBold text-[15px]">نمایندگی فیض اباد بدخشان</h3>
                     <ul className="w-full mt-[20px]">
                         <li>
                             <p className="font-ShabnamLight text-[14px] font-black">شماره تماس </p>
                             <div className="w-full">
-                                <a href="tel:93۷۹۶۰۰۵۰۲۰ ">۰۷۹۶۰۰۵۰۲۰ </a> / 
-                                <a href="tel:93۷۹۶۰۰۵۰۸۳">۰۷۹۶۰۰۵۰۸۳</a>
+                                <a href="tel:+93۷۹۶۰۰۵۰۲۰ ">۰۷۹۶۰۰۵۰۲۰ </a> / 
+                                <a href="tel:+93۷۹۶۰۰۵۰۸۳">۰۷۹۶۰۰۵۰۸۳</a>
                             </div>
                         </li>
 
@@ -422,13 +422,13 @@ function ContactAbout(){
 
                 {/* _____________________section____________16 ________________   */}
                 <section className="w-full sm:w-[50%] md:w-[30%] mt-[20px] px-[12px]">
-                <h5 className="font-ShabnamBold text-[15px]">نمایندگی بهارک بدخشان</h5>
+                <h3 className="font-ShabnamBold text-[15px]">نمایندگی بهارک بدخشان</h3>
                     <ul className="w-full mt-[20px]">
                         <li>
                             <p className="font-ShabnamLight text-[14px] font-black">شماره تماس </p>
                             <div className="w-full">
-                                <a href="tel:93۷۹۷۵۰۰۰۹۹ ">۰۷۹۷۵۰۰۰۹۹ </a> / 
-                                <a href="tel:93۷۷۸۳۰۹۴۰۹">۰۷۷۸۳۰۹۴۰۹</a>
+                                <a href="tel:+93۷۹۷۵۰۰۰۹۹ ">۰۷۹۷۵۰۰۰۹۹ </a> / 
+                                <a href="tel:+93۷۷۸۳۰۹۴۰۹">۰۷۷۸۳۰۹۴۰۹</a>
                             </div>
                         </li>
 
