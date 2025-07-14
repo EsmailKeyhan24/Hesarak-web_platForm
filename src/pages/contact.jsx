@@ -1,7 +1,7 @@
 import React  from "react";
 export default function Contact(){
     return(
-        <section className="w-full min-h-[300px py-[50px]">
+        <section className="w-full min-h-[300px py-[50px] mt-[65px] px-[30px] md:px-0">
             <div className="container mx-auto flex justify-center flex-wrap">
                 <h1 className="font-ShabnamBold text-[30px] text-center w-full"> ارتباط با شرکت ترانسپورتی حصارک پنجشیر</h1>
                 <p className="font-ShabnamLight lg:w-[70%] text-justify mt-[20px]">

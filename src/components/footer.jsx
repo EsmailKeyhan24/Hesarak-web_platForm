@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import LogoFoter from '../assets/image/logo192.png'
+import LogoFoter from '../assets/image/logo1920.png'
 import { TiHomeOutline } from "react-icons/ti";
 import { TbInfoTriangleFilled } from "react-icons/tb";
 import { LuTicketCheck } from "react-icons/lu";
@@ -19,15 +19,15 @@ import { FaSquareWhatsapp } from "react-icons/fa6";
 
 export default function Footer() {
     return (
-        <footer className="w-full min-h-[120px] bg-[#1f2c30] py-[50px]">
+        <footer className="w-full min-h-[120px] bg-[#1f2c30] py-[50px] px-[30px]">
             <div className="container text-light mx-auto">
 
                 <section className="w-full grid grid-cols-1 md:grid-cols-3 gap-10">
 
                     {/* =============DIV-ONE============= */}
                     <div className="flex flex-wrap px-[7px]">
-                        <img src={LogoFoter} className="w-[120px] h-[110px]" alt="لوگوی حصارک پنشجیر" />
-                        <p className="w-full font-ShabnamMedium my-[20px]">با حصارک، سفر را ایمن‌تر تجربه کنید</p>
+                        <img src={LogoFoter} className="w-[120px] object-cover" alt="لوگوی حصارک پنشجیر" />
+                        <p className="w-full font-ShabnamMedium">با حصارک، سفر را ایمن‌تر تجربه کنید</p>
                         <p className="font-ShabnamLight text-justify">شرکت ترانسپورتی حصارک پنجشیر با هدف ارائه خدمات مطمئن، سریع و ایمن در زمینه جابه‌جایی مسافرین بین شهرهای افغانستان فعالیت می‌کند.</p>
                     </div>
 

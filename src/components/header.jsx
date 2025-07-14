@@ -7,7 +7,7 @@ import { FaCircleUser, FaFacebook, FaSquareWhatsapp } from "react-icons/fa6";
 import { IoMdClose } from "react-icons/io";
 import {  ImTelegram } from "react-icons/im";
 import { FaInstagramSquare } from "react-icons/fa";
-import Logo from '../assets/image/logo192.png'
+import Logo from '../assets/image/logo1920.png';
 
 
 
@@ -81,20 +81,21 @@ export default function Header() {
     })
 
     return (
-        <header className="w-full bg-[red]">
+        <header className="w-full bg-[red] fixed top-0  z-[999]">
             <nav className="w-full h-[65px] bg-[#f8f9fa] px-[20px]">
                 {/* MENU for LG */}
                 {/* __________________MENU___LG________ */}
                 <div className="container mx-auto h-full  items-center justify-between hidden lg:flex">
-                    {/* <strong className="font-PlaypenExtraBold text-DarkGray"> <Link to="/">حـصارک پنجشِیـر</Link> </strong> */}
-                    <a href="#"><img src={Logo} className="w-[50px] h-[50px] rounded-[50%]" alt="لوگوی حصارک پنجشیر" /></a>
+                    <div className="w-[90px] h-[65] flex flex-wrap">
+                        <a href="#"><img src={Logo} className="w-[50px] border rounded-[50%]" alt="لوگوی حصارک پنجشیر" /></a>
+                        <strong className="font-PlaypenExtraBold text-DarkGray text-[12px]"> <Link to="/">حـصارک پنجشِیـر</Link> </strong>
+                    </div>
 
                     <ul className="flex h-full items-center">
-                        <li className="h-full  text-DarkGray px-[15px] font-PlaypenMedium"><Link className="h-full flex items-center" to="/">صفحه اصلی</Link></li>
-                        <li className="h-full  text-DarkGray px-[15px] font-PlaypenMedium"><Link className="h-full flex items-center" to="/about">دربـاره مـا</Link></li>
-                        <li className="h-full  text-DarkGray px-[15px] font-PlaypenMedium"><Link className="h-full flex items-center" to="/tickets">بـوک کـردن تـکت</Link></li>
-                        <li className="h-full  text-DarkGray px-[15px] font-PlaypenMedium"><Link className="h-full flex items-center" to="/blog">بـلاگ</Link></li>
-                        <li className="h-full  text-DarkGray px-[15px] font-PlaypenMedium"><Link className="h-full flex items-center" to="/contact">ارتـبـاط بـامـا</Link></li>
+                        <li className="h-full  text-DarkGray px-[15px] font-ShabnamMedium"><Link className="h-full flex items-center" to="/">صفحه اصلی</Link></li>
+                        <li className="h-full  text-DarkGray px-[15px] font-ShabnamMedium"><Link className="h-full flex items-center" to="/about">دربـاره مـا</Link></li>
+                        <li className="h-full  text-DarkGray px-[15px] font-ShabnamMedium"><Link className="h-full flex items-center" to="/blog">بـلاگ</Link></li>
+                        <li className="h-full  text-DarkGray px-[15px] font-ShabnamMedium"><Link className="h-full flex items-center" to="/contact">ارتـبـاط بـامـا</Link></li>
                     </ul>
                     <section className="flex items-center">
                         {showInstallButton && (
@@ -120,12 +121,11 @@ export default function Header() {
                         {/* ========BTN====CLose====NAVBAR======= */}
                         <span className="flex w-[40px] h-[40px] items-center justify-center cursor-pointer border rounded-[4px] text-[#fff] text-[25px]" onClick={closeNavbar}><IoMdClose /></span>
                         <ul className="w-full mt-[20px]">
-                            <li className="text-[#fff] text-[15px] font-PlaypenMedium w-full h-[45px] border-b border-[#f8f8f8]"><Link className="flex w-full h-full items-center " to="/">صفحه اصلی</Link></li>
-                            <li className="text-[#fff] text-[15px] font-PlaypenMedium w-full h-[45px] border-b border-[#f8f8f8]"><Link className="flex w-full h-full items-center " to="/about">درباره ما</Link></li>
-                            <li className="text-[#fff] text-[15px] font-PlaypenMedium w-full h-[45px] border-b border-[#f8f8f8]"><Link className="flex w-full h-full items-center " to="/tickets">بوک کردن تکت</Link></li>
-                            <li className="text-[#fff] text-[15px] font-PlaypenMedium w-full h-[45px] border-b border-[#f8f8f8]"><Link className="flex w-full h-full items-center " to="/blog">بلاگ</Link></li>
-                            <li className="text-[#fff] text-[15px] font-PlaypenMedium w-full h-[45px] border-b border-[#f8f8f8]"><Link className="flex w-full h-full items-center " to="/contact">ارتباط با ما</Link></li>
-                            <li className="text-[#fff] text-[15px] font-PlaypenMedium w-full h-[45px] border-b border-[#f8f8f8] flex items-center">
+                            <li className="text-[#fff] text-[15px] font-ShabnamMedium w-full h-[45px] border-b border-[#f8f8f8]"><Link className="flex w-full h-full items-center " to="/">صفحه اصلی</Link></li>
+                            <li className="text-[#fff] text-[15px] font-ShabnamMedium w-full h-[45px] border-b border-[#f8f8f8]"><Link className="flex w-full h-full items-center " to="/about">درباره ما</Link></li>
+                            <li className="text-[#fff] text-[15px] font-ShabnamMedium w-full h-[45px] border-b border-[#f8f8f8]"><Link className="flex w-full h-full items-center " to="/blog">بلاگ</Link></li>
+                            <li className="text-[#fff] text-[15px] font-ShabnamMedium w-full h-[45px] border-b border-[#f8f8f8]"><Link className="flex w-full h-full items-center " to="/contact">ارتباط با ما</Link></li>
+                            <li className="text-[#fff] text-[15px] font-ShabnamMedium w-full h-[45px] border-b border-[#f8f8f8] flex items-center">
                                 <Link to="/login" className="text-[13px] flex h-full items-center">
                                  <span className="text-[20px] ml-[10px]"><BsBoxArrowInLeft />
                                 </span> ثبت نام  یا ورود</Link>

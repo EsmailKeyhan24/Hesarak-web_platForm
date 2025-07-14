@@ -1,8 +1,9 @@
 import React  from "react";
 import { Link } from "react-router-dom";
+import BannerAbout from '../assets/image/about-header.jpg'
 export default function About(){
     return(
-        <section className="w-full min-h-[100vh] py-[50px]">
+        <section className="w-full min-h-[100vh] py-[50px] mt-[65px] px-[30px] md:px-0">
             <div className="container mx-auto">
                 <ContentAbout />
             </div>
@@ -21,6 +22,7 @@ function ContentAbout(){
             <p className="text-[16px] mb-4 text-justify mx-auto font-ShabnamLight text-[#000] mt-[15px]">
           هدف ما فراهم نمودن یک سیستم ترانسپورتی معیاری، امن و قابل اعتماد است تا مسافران عزیز سفرهای آرام، سریع و مطمئن را تجربه نمایند.
         </p>
+        <Banner />
         <h3 className="text-2xl font-ShabnamBold text-[#000] mt-8 mb-4">خدمات ما</h3>
         <ul className="list-disc list-inside text-gray-700 text-lg space-y-2">
             <li className="font-ShabnamLight">ترانسپورت بین‌ولایتی با موترهای مجهز</li>
@@ -46,5 +48,12 @@ function ContentAbout(){
             مراجعه نمایید.
         </p>
         </section>
+    )
+}
+
+
+function Banner(){
+    return(
+        <img src={BannerAbout} className="w-full" alt="حصارک پنجشیر" />
     )
 }

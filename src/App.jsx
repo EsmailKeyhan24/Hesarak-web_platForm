@@ -8,8 +8,10 @@ import Blog from "./pages/blog";
 import Login from "./pages/login";
 import Regester from "./pages/regester";
 import Footer from "./components/footer";
+import { AutoProvider } from "./AutoConext";
 export default function App(){
   return(
+    
     <main>
       <Header />
         <Routes>
@@ -18,10 +20,11 @@ export default function App(){
             <Route path="/contact" element={<Contact />}></Route>
             <Route path="/tickets" element={<Tickets />}></Route>
             <Route path="/blog" element={<Blog />} />
-            <Route path="/login" element={<Login />} />
+            <Route path="/login" element={<AutoProvider><Login /></AutoProvider>} />
             <Route path="/register" element={<Regester />} />
         </Routes>
         <Footer />
     </main>
+    
   )
 }
