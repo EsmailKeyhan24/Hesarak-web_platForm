@@ -4,16 +4,13 @@ import LogoFoter from '../assets/image/logo1920.png'
 import { TiHomeOutline } from "react-icons/ti";
 import { TbInfoTriangleFilled } from "react-icons/tb";
 import { LuTicketCheck } from "react-icons/lu";
-import { MdContactPhone } from "react-icons/md";
-import { FcRules } from "react-icons/fc";
-import { FcQuestions } from "react-icons/fc";
+import { MdContactPhone  ,MdMarkEmailRead} from "react-icons/md";
+import { FcRules ,FcQuestions } from "react-icons/fc";
 import { ImLocation2 } from "react-icons/im";
-import { HiPhoneIncoming } from "react-icons/hi";
-import { MdMarkEmailRead } from "react-icons/md";   
+import { HiPhoneIncoming } from "react-icons/hi"; 
 import { RiMapPinTimeFill } from "react-icons/ri";
 import {  FaFacebook } from "react-icons/fa6"; 
-import { TbBrandInstagram } from "react-icons/tb";
-import { TbBrandTelegram } from "react-icons/tb";
+import { TbBrandInstagram , TbBrandTelegram } from "react-icons/tb";
 import { FaSquareWhatsapp } from "react-icons/fa6";
 
 
@@ -27,8 +24,8 @@ export default function Footer() {
                     {/* =============DIV-ONE============= */}
                     <div className="flex flex-wrap px-[7px]">
                         <img src={LogoFoter} className="w-[120px] object-cover" alt="لوگوی حصارک پنشجیر" />
-                        <p className="w-full font-ShabnamMedium">با حصارک، سفر را ایمن‌تر تجربه کنید</p>
-                        <p className="font-ShabnamLight text-justify">شرکت ترانسپورتی حصارک پنجشیر با هدف ارائه خدمات مطمئن، سریع و ایمن در زمینه جابه‌جایی مسافرین بین شهرهای افغانستان فعالیت می‌کند.</p>
+                        <p className="w-full font-ShabnamMedium text-sm">با شرکت ترانسپورتی حصارک، سفر را ایمن‌تر تجربه کنید</p>
+                        <p className="font-ShabnamLight text-justify text-sm">شرکت ترانسپورتی حصارک پنجشیر با هدف ارائه خدمات مطمئن، سریع و ایمن در زمینه جابه‌جایی مسافرین بین شهرهای افغانستان فعالیت می‌کند.</p>
                     </div>
 
 
@@ -38,22 +35,19 @@ export default function Footer() {
                         <h3 className="font-ShabnamBold text-[22px]">لینک های مفید  </h3>
                         <ul className="w-full mt-[30px]">
                             <li className="font-ShabnamMedium h-[40px] hover:pr-[7px]  transition-all duration-100">
-                                <Link className="h-full flex items-center" to="/"> <TiHomeOutline className="text-[19px] ml-[10px]" />صفحه اصلی</Link>
+                                <Link className="h-full flex items-center text-sm" to="/"> <TiHomeOutline className="text-[19px] ml-[10px]" />صفحه اصلی</Link>
                             </li>
                             <li className="font-ShabnamMedium h-[40px] hover:pr-[7px]  transition-all duration-100">
-                                <Link className="h-full flex items-center" to="/about"> <TbInfoTriangleFilled className="text-[19px] ml-[10px]" />دربـاره مـا</Link>
+                                <Link className="h-full flex items-center text-sm" to="/about"> <TbInfoTriangleFilled className="text-[19px] ml-[10px]" />دربـاره مـا</Link>
                             </li>
                             <li className="font-ShabnamMedium h-[40px] hover:pr-[7px]  transition-all duration-100">
-                                <Link className="h-full flex items-center" to="/tickets"><LuTicketCheck className="text-[19px] ml-[10px]" /> بـوک کـردن تـکت</Link>
+                                <Link className="h-full flex items-center text-sm" to="/contact"><MdContactPhone  className="text-[19px] ml-[10px]"/> ارتـبـاط بـامـا</Link>
                             </li>
                             <li className="font-ShabnamMedium h-[40px] hover:pr-[7px]  transition-all duration-100">
-                                <Link className="h-full flex items-center" to="/contact"><MdContactPhone  className="text-[19px] ml-[10px]"/> ارتـبـاط بـامـا</Link>
+                                <Link className="h-full flex items-center text-sm" to="/blog"><FcRules className="text-[19px] ml-[10px]" /> قوانین و مقررات</Link>
                             </li>
                             <li className="font-ShabnamMedium h-[40px] hover:pr-[7px]  transition-all duration-100">
-                                <Link className="h-full flex items-center" to="/blog"><FcRules className="text-[19px] ml-[10px]" /> قوانین و مقررات</Link>
-                            </li>
-                            <li className="font-ShabnamMedium h-[40px] hover:pr-[7px]  transition-all duration-100">
-                                <Link className="h-full flex items-center" to="/blog"><FcQuestions  className="text-[19px] ml-[10px]"/> سوالات متداول</Link>
+                                <Link className="h-full flex items-center text-sm" to="/blog"><FcQuestions  className="text-[19px] ml-[10px]"/> سوالات متداول</Link>
                             </li>
                         </ul>
                     </div>

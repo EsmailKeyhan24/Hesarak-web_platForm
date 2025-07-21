@@ -44,7 +44,7 @@ export default function Example() {
         months={dari_af.months}
         calendarPosition="bottom-right"
         id="data"
-        className="font-ShabnamMedium h-[80%] border-[10px solid red]"
+        className="font-ShabnamMedium"
         plugins={[
           <DatePanel />
         ]}
@@ -54,7 +54,6 @@ export default function Example() {
             transition: "all 400ms cubic-bezier(0.335, 0.010, 0.030, 1.360)",
           }),
         ]}
-        inputClass="custom-input"
       />
        
     </div>

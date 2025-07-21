@@ -36,7 +36,7 @@ function BannerHome(){
     return(
         <section className="w-full min-h-[400px] px-[30px] py-[40px]">
             <div className="container mx-auto flex flex-wrap">
-                <section className="w-full md:w-[50%] lg:w-[40%] overflow-hidden pt-[30px]">
+                <section className="w-full md:w-[50%] lg:w-[40%] overflow-hidden pt-[30px] h-[400px] sticky top-[50px]">
                     <h2 className="font-ShabnamBold text-sm">بهترین موترهای ترانسپورت VIP و ۵۸۰  حصارک پنجشیر</h2>
                     <p className="font-ShabnamLight my-4">
                         با انتخاب خدمات ترانسپورت ما  ، با موترهای لوکس VIP و ۵۸۰، سفرهای راحت، سریع و ایمن را تجربه کنید.

@@ -19,26 +19,9 @@ body{
       }
     .custom-neomorphic-shadow_social {
         box-shadow: 
-          -3px -3px 7px #f3f4f633,
-          1px 1px 5px #ceced1;
-          /* inset -7px -7px 10px rgba(255, 255, 255, 0.2),
-          inset 15px 15px 15px rgba(0, 0, 0, 0.1); */
+          -1px -1px 7px #ceced19e,
+          inset  3px 3px 5px black,
+          inset  -3px -3px 5px black;
+          border:5px solid #333;
       }
-}
-
-.custom-input{
-  border-radius: 15px;
-  border: 1px #0c8af8 solid;
-  padding: 4px 12px;
-  background-color: white;
-  height: 22px;
-  box-shadow: 0 0 2px #0074d9;
-  &:focus{
-    border-radius: 15px;
-    border: 1px #0c8af8 solid;
-    padding: 4px 12px;
-    background-color: white;
-    height: 22px;
-    box-shadow: 0 0 2px #0074d9;
-  }
 }
