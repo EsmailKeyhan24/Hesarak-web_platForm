@@ -66,7 +66,7 @@ export default function ContentSlider() {
             </li>
         </ul>
 
-        <h2  className='font-ShabnamBold text-sm mt-[20px]'>📱 تجربه سفر دیجیتالی را با قدرت‌بس آغاز کنید!</h2>
+        <h2  className='font-ShabnamBold text-sm mt-[20px]'>📱 تجربه سفر دیجیتالی را با شرکت ترانسپورتی حصارک پنجشیر آغاز کنید!</h2>
         <p className='font-ShabnamLight flex'>
             <RxDot   className='ml-1'  />
             فرقی نمی‌کند در کابل باشید یا بدخشان، هرات یا قندهار — تکت‌تان را از همین حالا به‌صورت آنلاین خریداری نمایید و سفر خود را با آرامش و اطمینان شروع کنید.
