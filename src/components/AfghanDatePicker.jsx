@@ -8,6 +8,8 @@ import transition from "react-element-popper/animations/transition"
 import InputIcon from "react-multi-date-picker/components/input_icon"
 import "react-multi-date-picker/styles/layouts/mobile.css"
 
+import { useProvince } from "./ProvinceContext";
+
 // تعریف زبان دری
 const dari_af = {
   months: [
@@ -25,6 +27,12 @@ const dari_af = {
 
 export default function Example() {
   const [date, setDate] = useState(new DateObject({ calendar: persian }));
+  const { setTravelDate } = useProvince();
+
+  const handleChange = (selectedDate) => {
+    setDate(selectedDate);
+    setTravelDate(selectedDate.format("YYYY/MM/DD"));
+  };
 
   return (
     <div
@@ -38,7 +46,7 @@ export default function Example() {
       <DatePicker
         value={date}      
         render={<InputIcon/>}         // 👈 نمایش تاریخ امروز
-        onChange={setDate}         // برای آپدیت هنگام انتخاب
+        onChange={handleChange}       // برای آپدیت هنگام انتخاب
         calendar={persian}
         locale={persian_fa}
         months={dari_af.months}

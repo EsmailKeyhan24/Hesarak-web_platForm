@@ -9,21 +9,21 @@ import Tickets from './pages/tickets'
 import Blog from "./pages/blog";
 import Login from "./pages/login";
 import Regester from "./pages/regester";
-import { AutoProvider } from "./AutoConext";
+import { ProvinceProvider  } from "./components/ProvinceContext";
 export default function App(){
   const location = useLocation();
-  const hideFooterOnRoutes = ['/login', '/register'];
+  const hideFooterOnRoutes = ['/login', '/register' , '/tickets'];
   return(
     
     <main>
       <Header />
         <Routes>
-            <Route path="/" element={<Home />}></Route>
-            <Route path="/about" element={<About />}></Route>
+            <Route path="/" element={<ProvinceProvider> <Home /> </ProvinceProvider>}></Route>
+            <Route path="/about" element={ <About />}></Route>
             <Route path="/contact" element={<Contact />}></Route>
             <Route path="/tickets" element={<Tickets />}></Route>
             <Route path="/blog" element={<Blog />} />
-            <Route path="/login" element={<AutoProvider><Login /></AutoProvider>} />
+            <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Regester />} />
         </Routes>
          {/* فوتر فقط زمانی نمایش داده شود که مسیر در لیست سیاه نباشد */}
