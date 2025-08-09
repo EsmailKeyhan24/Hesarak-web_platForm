@@ -153,7 +153,7 @@ function ContactAbout(){
                         <li className="mt-[20px]">
                             <p className="font-ShabnamLight text-[14px] font-black">آدرس فیـزیـکـی نمایـندگـی</p>
                             <p className="font-ShabnamLight text-justify">
-                            آدرس نمایندگی ناحیه ۴ ترمینال جوزجان      
+                              ناحیه ۴ ترمینال جوزجان      
                             </p>
                         </li>
                     </ul>
@@ -177,7 +177,7 @@ function ContactAbout(){
                         <li className="mt-[20px]">
                             <p className="font-ShabnamLight text-[14px] font-black">آدرس فیـزیـکـی نمایـندگـی</p>
                             <p className="font-ShabnamLight text-justify">
-                                آدرس نمایندگی اندخوی واقع چوک اندخوی
+                                  اندخوی واقع چوک اندخوی
                             </p>
                         </li>
                     </ul>
@@ -200,7 +200,7 @@ function ContactAbout(){
                         <li className="mt-[20px]">
                             <p className="font-ShabnamLight text-[14px] font-black">آدرس فیـزیـکـی نمایـندگـی</p>
                             <p className="font-ShabnamLight text-justify">
-                            آدرس نمایندگی  فاریاب 
+                                
                             بغل بازار واقع تربت جام بابا 
                             </p>
                         </li>
@@ -224,7 +224,7 @@ function ContactAbout(){
                         <li className="mt-[20px]">
                             <p className="font-ShabnamLight text-[14px] font-black">آدرس فیـزیـکـی نمایـندگـی</p>
                             <p className="font-ShabnamLight text-justify">
-                                آدرس نمایندگی    واقع عزیزی بانک پهلوی گدام باغ  
+                                 واقع عزیزی بانک پهلوی گدام باغ  
                             </p>
                         </li>
                     </ul>
@@ -246,7 +246,7 @@ function ContactAbout(){
                         <li className="mt-[20px]">
                             <p className="font-ShabnamLight text-[14px] font-black">آدرس فیـزیـکـی نمایـندگـی</p>
                             <p className="font-ShabnamLight text-justify">
-                                 آدرس  نمایندگی ولایت کندز واقع سه درک ترمینال کندز
+                                    ولایت کندز واقع سه درک ترمینال کندز
                             </p>
                         </li>
                     </ul>
@@ -269,7 +269,7 @@ function ContactAbout(){
                         <li className="mt-[20px]">
                             <p className="font-ShabnamLight text-[14px] font-black">آدرس فیـزیـکـی نمایـندگـی</p>
                             <p className="font-ShabnamLight text-justify">
-                             آدرس نمایندگی واقع پل کلان ترمینال دریا
+                               واقع پل کلان ترمینال دریا
                             </p>
                         </li>
                     </ul>
@@ -292,7 +292,7 @@ function ContactAbout(){
                         <li className="mt-[20px]">
                             <p className="font-ShabnamLight text-[14px] font-black">آدرس فیـزیـکـی نمایـندگـی</p>
                             <p className="font-ShabnamLight text-justify">
-                            آدرس نمایندگی والسوالی خواجه غار قلب شهر 
+                              والسوالی خواجه غار قلب شهر 
                             واقع مسجد جامع 
                             </p>
                         </li>
@@ -316,7 +316,7 @@ function ContactAbout(){
                         <li className="mt-[20px]">
                             <p className="font-ShabnamLight text-[14px] font-black">آدرس فیـزیـکـی نمایـندگـی</p>
                             <p className="font-ShabnamLight text-justify">
-                                آدرس نمایندگی والسوالی دشت قلعه 
+                                  والسوالی دشت قلعه 
                                 واقع بلاک تاش تیمور 
                             </p>
                         </li>
@@ -340,7 +340,7 @@ function ContactAbout(){
                         <li className="mt-[20px]">
                             <p className="font-ShabnamLight text-[14px] font-black">آدرس فیـزیـکـی نمایـندگـی</p>
                             <p className="font-ShabnamLight text-justify">
-                                آدرس نمایندگی والسوالی ینگی قلعه 
+                                  والسوالی ینگی قلعه 
                                 چوک ینگی قلعه
                             </p>
                         </li>
@@ -364,7 +364,7 @@ function ContactAbout(){
                         <li className="mt-[20px]">
                             <p className="font-ShabnamLight text-[14px] font-black">آدرس فیـزیـکـی نمایـندگـی</p>
                             <p className="font-ShabnamLight text-justify">
-                               آدرس نمایندگی والسوالی امام صاحب 
+                                 والسوالی امام صاحب 
                                 واقع عده جدید کندز 
                             </p>
                         </li>
@@ -410,7 +410,7 @@ function ContactAbout(){
                         <li className="mt-[20px]">
                             <p className="font-ShabnamLight text-[14px] font-black">آدرس فیـزیـکـی نمایـندگـی</p>
                             <p className="font-ShabnamLight text-justify">
-                               آدرس نمایندگی فیض اباد بدخشان 
+                                 فیض اباد بدخشان 
                                چوک حاجی خلیل ترمینال فیض اباد
                             </p>
                         </li>
@@ -435,7 +435,7 @@ function ContactAbout(){
                         <li className="mt-[20px]">
                             <p className="font-ShabnamLight text-[14px] font-black">آدرس فیـزیـکـی نمایـندگـی</p>
                             <p className="font-ShabnamLight text-justify">
-                               آدرس  نمایندگی بهارک بدخشان پل شلشه ترمینال بهارک بدخشان
+                                  بهارک بدخشان پل شلشه ترمینال بهارک بدخشان
                             </p>
                         </li>
                     </ul>

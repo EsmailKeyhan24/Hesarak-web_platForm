@@ -31,7 +31,7 @@ export default function Example() {
 
   const handleChange = (selectedDate) => {
     setDate(selectedDate);
-    setTravelDate(selectedDate.format("YYYY/MM/DD"));
+    setTravelDate(selectedDate.format("YYYY-MM-DD"));
   };
 
   return (
@@ -52,7 +52,7 @@ export default function Example() {
         months={dari_af.months}
         calendarPosition="bottom-right"
         id="data"
-        className="font-ShabnamMedium"
+        className="font-ShabnamMedium mx:w-[20%]"
         plugins={[
           <DatePanel />
         ]}

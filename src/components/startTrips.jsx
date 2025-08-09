@@ -14,7 +14,7 @@ export default function StartTrips() {
         fetch('https://hesarak-backend.vercel.app/api/provinces')
             .then(response => response.json())
             .then(data => {
-                setProvinces(data.data);
+                setProvinces(data.data.provinces);
             })
             .catch(error => {
                 console.log('خطا در گرفتن دیتا:', error)
@@ -49,7 +49,7 @@ export default function StartTrips() {
                 <ul className='w-full h-[210px] py-3 px-2 bg-white absolute bottom-[30px] opacity-0 peer-focus:opacity-100 transition duration-75 shadow-md rounded-sm z-10'>
                     {provinces.map((province, index) => (
                         <li key={index}
-                            className='font-ShabnamLight w-full h-[35px] cursor-pointer hover:bg-gray-100 px-2'
+                            className='font-ShabnamLight w-full h-[35px] cursor-pointer hover:bg-gray-100 px-2 flex items-center'
                             onClick={() => handleChooseStartProvince(province)}>
                             <strong className='flex w-full'>{province}</strong>
                         </li>
@@ -74,7 +74,7 @@ export default function StartTrips() {
                 <ul className='w-full h-[210px] py-3 px-2 bg-white absolute bottom-[30px] opacity-0 peer-focus:opacity-100 transition duration-75 shadow-md rounded-sm z-10'>
                     {provinces.map((province, index) => (
                         <li key={index}
-                            className='font-ShabnamLight w-full h-[35px] cursor-pointer hover:bg-gray-100 px-2'
+                            className='font-ShabnamLight w-full h-[35px] cursor-pointer hover:bg-gray-100 px-2 flex items-center'
                             onClick={() => handleChooseEndProvince(province)}>
                             <strong className='flex w-full'>{province}</strong>
                         </li>

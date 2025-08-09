@@ -87,7 +87,7 @@ export default function Header() {
                 {/* __________________MENU___LG________ */}
                 <div className="container mx-auto h-full  items-center justify-between hidden lg:flex">
                     <div className="w-[90px] h-[65] flex flex-wrap">
-                        <a href="#"><img src={Logo} className="w-[50px] border rounded-[50%]" alt="لوگوی حصارک پنجشیر" /></a>
+                        <a href="https://hesarak.com" title="لوگوی حصارک پنجشیر"><img src={Logo} className="w-[50px] rounded-[50%]" alt="لوگوی حصارک پنجشیر" /></a>
                         <strong className="font-PlaypenExtraBold text-DarkGray text-[12px]"> <Link to="/">حـصارک پنجشِیـر</Link> </strong>
                     </div>
 
@@ -99,12 +99,12 @@ export default function Header() {
                     </ul>
                     <section className="flex items-center">
                         {showInstallButton && (
-                            <button onClick={handleInstallClick} className="font-PlaypenBold mx-[14px] ml-[20px] flex text-DarkGray">
+                            <button onClick={handleInstallClick} className="font-ShabnamBold mx-[14px] ml-[20px] flex text-DarkGray">
                                 <span className="mt-[5px] ml-[5px]"><MdInstallDesktop /></span>  نصب
                             </button>
                         )}
                         <div>
-                            <Link to="/login" className="font-PlaypenMedium text-[13px] text-DarkGray   py-[7px] px-[14px]  rounded-[100px] flex items-center transition duration-300 ease-in-out hover:bg-[#F3F4F6] "> <span className="text-[20px] ml-[10px]"><BsBoxArrowInLeft /></span> ثبت نام  یا ورود</Link>
+                            <Link to="/login" className="font-ShabnamBold text-[13px] text-DarkGray   py-[7px] px-[14px]  rounded-[100px] flex items-center transition duration-300 ease-in-out hover:bg-[#F3F4F6] "> <span className="text-[20px] ml-[10px]"><BsBoxArrowInLeft /></span> ثبت نام  یا ورود</Link>
                         </div>
                     </section>
                 </div>

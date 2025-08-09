@@ -6,13 +6,15 @@ import Home from "./pages/home"
 import About  from "./pages/about";
 import Contact from "./pages/contact";
 import Tickets from './pages/tickets'
+import Trips from './pages/trips';
+import DetailsTrips from './pages/detailsTrips';
 import Blog from "./pages/blog";
 import Login from "./pages/login";
 import Regester from "./pages/regester";
 import { ProvinceProvider  } from "./components/ProvinceContext";
 export default function App(){
   const location = useLocation();
-  const hideFooterOnRoutes = ['/login', '/register' , '/tickets'];
+  const hideFooterOnRoutes = ['/login', '/register' , '/tickets','/trips','/detailsTrips'];
   return(
     
     <main>
@@ -22,6 +24,8 @@ export default function App(){
             <Route path="/about" element={ <About />}></Route>
             <Route path="/contact" element={<Contact />}></Route>
             <Route path="/tickets" element={<Tickets />}></Route>
+            <Route path="/trips" element={<Trips />} />
+            <Route path="/DetailsTrips" element={<DetailsTrips />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Regester />} />
