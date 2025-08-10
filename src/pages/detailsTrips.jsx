@@ -228,9 +228,12 @@
                                     );
                                 })}
                             </div>
-                            <div className="my-[10px] w-full flex justify-center items-center">
+                            <div className="my-[10px] w-full flex justify-center items-center flex-wrap">
                                 <strong className="font-ShabnamBold text-[12px]">مجموع :</strong>
                                 <span className="text-green-500 font-bold font-ShabnamMedium text-[12px]"> {totalPrice.toLocaleString()} افغانی</span>
+                                <section className="w-full my-[20px] flex justify-center">
+                                    <button className="w-[170px] h-[45px] bg-DarkGray text-white font-ShabnamBold rounded-lg cursor-pointer">ثبت تکت</button>
+                                </section>
                             </div>
                         </section>
                         {/* _________Of_____Layout__Seats_________ */}

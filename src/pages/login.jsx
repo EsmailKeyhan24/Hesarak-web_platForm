@@ -5,13 +5,6 @@ import { Link, useNavigate } from "react-router-dom";   // NEW
 
 
 const LoginForm = () => {
-
-
-
-
-
-
-
   const navigate = useNavigate();                       // NEW
 
   // ____________States________________________________________________
@@ -47,12 +40,12 @@ const LoginForm = () => {
     try {
       setLoading(true);
       const res = await fetch(
-        "https://029a920a991f.ngrok-free.app/auth/jwt/create/",
+        "https://hesarak-backend-git-cors-fix-matee-safis-projects.vercel.app/users/login",
         {
           method : "POST",
           headers: { "Content-Type": "application/json" },
           body   : JSON.stringify({
-            phone_number  : formData.phone,
+            email: formData.phone,
             password: formData.password,
           }),
         }
@@ -87,14 +80,14 @@ const LoginForm = () => {
   return (
     <section className="w-full h-custom bg-lightGray flex items-center justify-center mt-[65px]" dir="rtl">
       <form onSubmit={handleSubmitForm} className="w-[400px] bg-white rounded-lg p-[20px]">
-        <h2 className="text-center font-PlaypenExtraBold text-DarkGray text-[20px]">
+        <h2 className="text-center font-ShabnamBold text-DarkGray text-[20px]">
           ورود به حساب کاربـری
         </h2>
 
         {/* _______فیلد موبایل_______ */}
         <div className="flex flex-col gap-[10px] mt-[20px] relative">
-          <label htmlFor="phone" className="font-PlaypenBold text-DarkGray text-[16px]">
-            موبایل
+          <label htmlFor="phone" className="font-ShabnamBold text-DarkGray text-[14px]">
+            موبایل یا ایمیل 
           </label>
           <input
             type="text"
@@ -112,7 +105,7 @@ const LoginForm = () => {
 
         {/* _______فیلد رمزعبور_______ */}
         <div className="flex flex-col gap-[10px] mt-[20px] mb-[10px] relative">
-          <label htmlFor="password" className="font-PlaypenBold text-DarkGray text-[16px]">
+          <label htmlFor="password" className="font-ShabnamBold text-DarkGray text-[14px]">
             رمـز عبـور
           </label>
           <input
