@@ -12,6 +12,8 @@ import Blog from "./pages/blog";
 import Login from "./pages/login";
 import Regester from "./pages/regester";
 import { ProvinceProvider  } from "./components/ProvinceContext";
+import { UserProvider } from "./context/UserContext";
+
 export default function App(){
   const location = useLocation();
   const hideFooterOnRoutes = ['/login', '/register' , '/tickets','/trips','/detailsTrips'];
@@ -19,6 +21,7 @@ export default function App(){
     
     <main>
       <Header />
+        <UserProvider>
         <Routes>
             <Route path="/" element={<ProvinceProvider> <Home /> </ProvinceProvider>}></Route>
             <Route path="/about" element={ <About />}></Route>
@@ -30,6 +33,7 @@ export default function App(){
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Regester />} />
         </Routes>
+        </UserProvider>
          {/* فوتر فقط زمانی نمایش داده شود که مسیر در لیست سیاه نباشد */}
       {!hideFooterOnRoutes.includes(location.pathname) && <Footer />}
     </main>

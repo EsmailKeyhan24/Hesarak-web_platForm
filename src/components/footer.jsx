@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import LogoFoter from '../assets/image/logo1920.png'
+import LogoFoter from '../assets/image/logo192.png'
 import { TiHomeOutline } from "react-icons/ti";
 import { TbInfoTriangleFilled } from "react-icons/tb";
 import { LuTicketCheck } from "react-icons/lu";
@@ -23,7 +23,7 @@ export default function Footer() {
 
                     {/* =============DIV-ONE============= */}
                     <div className="flex flex-wrap px-[7px]">
-                        <img src={LogoFoter} className="w-[120px] object-cover" alt="لوگوی حصارک پنشجیر" />
+                        <img src={LogoFoter} className="w-[120px] h-[120px] rounded-[50%] object-cover" alt="لوگوی حصارک پنشجیر" />
                         <p className="w-full font-ShabnamMedium text-sm">با شرکت ترانسپورتی حصارک، سفر را ایمن‌تر تجربه کنید</p>
                         <p className="font-ShabnamLight text-justify text-sm">شرکت ترانسپورتی حصارک پنجشیر با هدف ارائه خدمات مطمئن، سریع و ایمن در زمینه جابه‌جایی مسافرین بین شهرهای افغانستان فعالیت می‌کند.</p>
                     </div>

@@ -1,21 +1,75 @@
 import { Link } from "react-router-dom";
 import React, { useEffect, useRef, useState } from 'react';
-import { BsBoxArrowInLeft } from "react-icons/bs";
+// import { BsBoxArrowInLeft } from "react-icons/bs";
 import { MdInstallDesktop } from "react-icons/md";
 import { PiListBold } from "react-icons/pi";
 import { FaCircleUser, FaFacebook, FaSquareWhatsapp } from "react-icons/fa6";
 import { IoMdClose } from "react-icons/io";
-import {  ImTelegram } from "react-icons/im";
+import { ImTelegram } from "react-icons/im";
 import { FaInstagramSquare } from "react-icons/fa";
+import { BsBoxArrowInLeft, BsBoxArrowRight } from "react-icons/bs"; // خروج
 import Logo from '../assets/image/logo1920.png';
 
 
 
 export default function Header() {
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [deferredPrompt, setDeferredPrompt] = useState(null);
     const [showInstallButton, setShowInstallButton] = useState(false);
     const menuToggleRef = useRef(null);
     const toggleRef = useRef(null);
+
+    const checkAuthStatus = async () => {
+        try {
+          const res = await fetch(
+            "https://hesarak-backend.vercel.app/api/users/me",
+            {
+              method: "GET",
+              headers: { "Content-Type": "application/json" },
+              credentials: "include", // Important to send cookies
+            }
+          );
+    
+          if (res.status === 200) {
+            setIsLoggedIn(true);
+          } else {
+            setIsLoggedIn(false);
+          }
+        } catch (err) {
+          console.error("Auth check failed:", err);
+          setIsLoggedIn(false);
+        }
+      };
+
+      const logout = async () => {
+        try {
+          const res = await fetch(
+            "https://hesarak-backend.vercel.app/admin/logout",
+            {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              credentials: "include", // Sends the HTTP-only cookie
+            }
+          );
+    
+          if (res.ok) {
+            setIsLoggedIn(false);
+          } else {
+            console.error("Logout failed");
+          }
+        } catch (err) {
+          console.error("Logout error:", err);
+        }
+      };
+      
+
+    useEffect(() => {
+        checkAuthStatus()
+    }, [])
+
+
+
+
 
     useEffect(() => {
         const handleInstallEvent = (e) => {
@@ -73,10 +127,10 @@ export default function Header() {
 
 
     // __________________________CLOSE____menuToggle___To___Phone_State__
-    const _liMenu=document.querySelectorAll('#menuToggle>ul>li')
-    _liMenu.forEach((li)=>{
-        li.addEventListener('click' , ()=>{
-            document.getElementById('menuToggle').style.right='-400px'
+    const _liMenu = document.querySelectorAll('#menuToggle>ul>li')
+    _liMenu.forEach((li) => {
+        li.addEventListener('click', () => {
+            document.getElementById('menuToggle').style.right = '-400px'
         })
     })
 
@@ -103,9 +157,16 @@ export default function Header() {
                                 <span className="mt-[5px] ml-[5px]"><MdInstallDesktop /></span>  نصب
                             </button>
                         )}
-                        <div>
-                            <Link to="/login" className="font-ShabnamBold text-[13px] text-DarkGray   py-[7px] px-[14px]  rounded-[100px] flex items-center transition duration-300 ease-in-out hover:bg-[#F3F4F6] "> <span className="text-[20px] ml-[10px]"><BsBoxArrowInLeft /></span> ثبت نام  یا ورود</Link>
-                        </div>
+                        {!isLoggedIn && <div>
+                            <Link to="/login" className="font-ShabnamBold text-[13px] text-DarkGray   py-[7px] px-[14px]  rounded-[100px] flex items-center transition duration-300 ease-in-out hover:bg-[#F3F4F6] ">
+                                <span className="text-[20px] ml-[10px]"><BsBoxArrowInLeft /></span> ثبت نام  یا ورود
+                            </Link>
+                        </div>}
+                        {isLoggedIn && 
+                            <button onClick={logout} className="font-ShabnamBold text-[13px] text-DarkGray   py-[7px] px-[14px]  rounded-[100px] flex items-center transition duration-300 ease-in-out hover:bg-[#F3F4F6] ">
+                                <span className="text-[20px] ml-[10px]"><BsBoxArrowRight /></span>خروج
+                            </button>
+                        }
                     </section>
                 </div>
                 {/* ______END___OF____________MENU___LG________ */}
@@ -126,9 +187,19 @@ export default function Header() {
                             <li className="text-[#fff] text-[15px] font-ShabnamMedium w-full h-[45px] border-b border-[#f8f8f8]"><Link className="flex w-full h-full items-center " to="/blog">بلاگ</Link></li>
                             <li className="text-[#fff] text-[15px] font-ShabnamMedium w-full h-[45px] border-b border-[#f8f8f8]"><Link className="flex w-full h-full items-center " to="/contact">ارتباط با ما</Link></li>
                             <li className="text-[#fff] text-[15px] font-ShabnamMedium w-full h-[45px] border-b border-[#f8f8f8] flex items-center">
-                                <Link to="/login" className="text-[13px] flex h-full items-center">
+                                {/* <Link to="/login" className="text-[13px] flex h-full items-center">
                                  <span className="text-[20px] ml-[10px]"><BsBoxArrowInLeft />
-                                </span> ثبت نام  یا ورود</Link>
+                                </span> ثبت نام  یا ورود</Link>  */}
+                                
+                                    {isLoggedIn ? (
+                                        <button className="flex items-center">
+                                            <BsBoxArrowRight className="ml-2" /> خروج
+                                        </button>
+                                    ) : (
+                                        <Link to="/login" className="flex items-center">
+                                            <BsBoxArrowInLeft className="ml-2" /> ثبت نام یا ورود
+                                        </Link>
+                                    )}
                             </li>
                         </ul>
                         <div className="w-full h-[60px] mt-[40px] flex justify-center items-center gap-[10px] text-[25px] text-[#fff]">
@@ -161,3 +232,9 @@ export default function Header() {
         </header>
     );
 }
+
+
+
+
+
+
