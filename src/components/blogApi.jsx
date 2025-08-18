@@ -97,7 +97,7 @@ const PostList = ({ onSelectPost }) => {
 
     return (
         <div className="w-full lg:w-[50%]">
-            <h2 className="mb-4 font-ShabnamBold  custom-neomorphic-shadow py-[10px] px-[22px] text-[25px] border rounded-[100px]">فـهرسـت جدیدتـریـن اخـبار 👇 </h2>
+            <h2 className="mb-4 font-ShabnamBold  custom-neomorphic-shadow py-[10px] px-[22px] text-[16px] text-center border rounded-[100px]">فـهرسـت جدیدتـریـن اخـبار 👇 </h2>
             {posts.map((post) => (
                 <div key={post.id} className="lg:pr-5">
                     <div className="w-full flex mt-9 cursor-pointer" onClick={() => onSelectPost(post.id)}>

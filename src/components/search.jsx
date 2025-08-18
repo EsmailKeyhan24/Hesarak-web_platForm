@@ -53,8 +53,8 @@ export default function Search() {
                 <StartTrips />
 
             </div>
-            <div className="w-full lg:w-[43%] h-[45px]  rounded-md font-ShabnamMedium flex mt-[15px] md:lg-0">
-                <AfghanDatePicker />
+            <div className="w-full lg:w-[43%] h-[45px]  rounded-md font-ShabnamMedium flex mt-[15px] md:lg-0 justify-between">
+                <section className='w-[110px]  overflow-hidden'><AfghanDatePicker /></section>
                 <button type="submit" className="w-[49%] bg-DarkGray
                                  text-white 
                                   custom-neomorphic-shadow_social

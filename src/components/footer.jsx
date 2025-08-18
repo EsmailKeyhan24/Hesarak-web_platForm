@@ -59,11 +59,11 @@ export default function Footer() {
                         <ul className="w-full mt-[30px]">
                             <li className="text-lightGray font-ShabnamLight mt-[10px] flex">
                                 <ImLocation2 className="text-[26px]" /> 
-                                <p className="mt-[10px]">کابل، سرای شمالی، جاده عمومی</p>
+                                <p className="mt-[10px]">دفتر مرکزی.  کابل خیرخانه لوای بابه جان ترمینال پایتخت</p>
                             </li>
                             <li className="font-ShabnamLight mt-[15px] flex">
                             <HiPhoneIncoming className="text-[26px]" />
-                                <a className="mt-[12px]" href="tel:92788 123 456">63 488 75 078 / </a>  <a className="mt-[12px]" href="tel:93799 654 321">63 488 75 078</a>
+                                <a className="mt-[12px]" href="tel:92788 123 456">0799004657 / </a>  <a className="mt-[12px]" href="tel:93799 654 321">0797500021</a>
                             </li>
                             <li className="font-ShabnamLight mt-[11px] flex">
                             <MdMarkEmailRead className="text-[26px]" />
@@ -71,7 +71,7 @@ export default function Footer() {
                             </li>
                             <li className="text-light font-ShabnamLight mt-[10px] flex">
                             <RiMapPinTimeFill className="text-[26px]" />
-                                <p className="mt-[12px]"> ساعت کاری: ۸ صبح تا ۶ عصر (هر روز بجز جمعه)</p>
+                                <p className="mt-[12px]">همه روزه(24)ساعته</p>
                             </li>
                         </ul>
 

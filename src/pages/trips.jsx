@@ -68,18 +68,18 @@ export default function Trips() {
                             <section className="w-full  flex h-[40px] items-center">        
                                 <span className="font-bold font-ShabnamBold">{toPersianDigits(trip.departureTime)}</span>
                                 <span className="flex w-[20%] h-0 border"></span>
-                                <span className="font-ShabnamLight text-[12px] text-slate-500 mx-[5px]">{formatDuration(trip.duration)}</span>
+                                <span className="font-ShabnamLight text-[11px] text-slate-500 mx-[5px]">{formatDuration(trip.duration)}</span>
                                 <span className="flex w-[20%] h-0 border"></span>
-                                <span className="font-bold font-ShabnamBold">{toPersianDigits(trip.arrivalTime)}</span>
+                                <span className="font-bold font-ShabnamBold text-[12px]">{toPersianDigits(trip.arrivalTime)}</span>
                                 <span className="flex w-[10%] h-0 border"></span>
-                                <strong className="font-ShabnamBold mr-3 text-[12px]">قیمت{trip.price}افغانی</strong>
+                                <strong className="font-ShabnamBold mr-3 text-[10px]">قیمت{trip.price}افغانی</strong>
                             </section>
 
 
-                            <section className="w-full  flex items-center px-3 h-[45px]  rounded-[100px] justify-evenly custom-neomorphic-shadow border-[10px]">
-                                <strong className="font-ShabnamBold text-sm flex"><BsBusFront />{trip.bus.type.name} </strong> 
+                            <section className="w-full  flex flex-wrap items-center px-3 py-[10px] md:py-0 md:h-[45px] my-[15px] rounded-[100px] justify-evenly custom-neomorphic-shadow border-[10px]">
+                                <strong className="font-ShabnamBold text-[14px] flex"><BsBusFront />{trip.bus.type.name} </strong> 
                                 <span className="font-ShabnamLight mx-[12px] font-bold flex"><MdOutlineAirlineSeatReclineNormal />{trip.availability.totalSeats} </span>
-                                <span className="font-ShabnamLight mx-[12px] font-bold">چوکی خالی:{trip.availability.availableSeats}</span>
+                                <span className="font-ShabnamLight mx-[12px] text-[14px] font-bold">چوکی خالی:{trip.availability.availableSeats}</span>
                                 {searchInfo && (<span className="text-black font-ShabnamMedium text-[13px] flex"><BsFillCalendar2DateFill />{searchInfo.originalDate}</span>)}
                                 <span className="font-bold font-ShabnamBold flex"><MdAccessTime />{toPersianDigits(trip.departureTime)}</span>
                             </section>

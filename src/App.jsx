@@ -20,8 +20,8 @@ export default function App(){
   return(
     
     <main>
-      <Header />
         <UserProvider>
+      <Header />
         <Routes>
             <Route path="/" element={<ProvinceProvider> <Home /> </ProvinceProvider>}></Route>
             <Route path="/about" element={ <About />}></Route>

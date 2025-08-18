@@ -20,8 +20,7 @@ export default function Contact(){
 function Map(){
     return(
         <div className="lg:w-[70%] border mx-auto h-[350px]">
-            <iframe className="w-full h-full" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13146.41279005968!2d69.1446149!3d34.5382799!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38d16f70c9593667%3A0x4eb6762902bb0720!2sFrontWe!5e0!3m2!1sfa!2s!4v1711180698531!5m2!1sfa!2s"
-                         loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe title="ما را در جهان پیدا کنید." className="w-full h-full" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d597.7677383506634!2d69.11598526951171!3d34.57762210252004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzTCsDM0JzM5LjQiTiA2OcKwMDYnNTkuOSJF!5e1!3m2!1sen!2s!4v1755430503973!5m2!1sen!2s" width="600" height="450"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     )
 }

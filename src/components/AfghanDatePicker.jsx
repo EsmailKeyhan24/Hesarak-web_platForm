@@ -43,7 +43,7 @@ export default function Example() {
         تاریخ حرکت
     </label>
      
-      <DatePicker
+      <DatePicker 
         value={date}      
         render={<InputIcon/>}         // 👈 نمایش تاریخ امروز
         onChange={handleChange}       // برای آپدیت هنگام انتخاب
@@ -53,9 +53,6 @@ export default function Example() {
         calendarPosition="bottom-right"
         id="data"
         className="font-ShabnamMedium mx:w-[20%]"
-        plugins={[
-          <DatePanel />
-        ]}
         animations={[
           transition({
             from: 35,

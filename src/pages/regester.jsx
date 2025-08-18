@@ -74,7 +74,7 @@ export default function Register() {
       return;
     }
 
-    // ساخت داده برای ارسال مطابق فرمت API
+    
     const sendData = {
       email: formData.email,
       phone: formData.phone,
@@ -107,7 +107,6 @@ export default function Register() {
           rec_password: '',
           gender: 'male'
         });
-        // می‌تونی فرم رو ریست هم بکنی اگر خواستی
         setFormData({
           fullName: '',
           fatherName: '',
@@ -141,7 +140,7 @@ export default function Register() {
       )}
 
 
-      <form onSubmit={handleSubmit} className="w-[400px] bg-white rounded-lg p-[20px]" autoComplete="off">
+      <form onSubmit={handleSubmit} className="w-[360px] bg-white rounded-lg p-[20px]" autoComplete="off">
 
         <h3 className="font-PlaypenExtraBold text-DarkGray text-[16px]">ثبت نام</h3>
         <p className="font-ShabnamLight font-black text-[12px]">لطفاً تمامی اطلاعات خویش را درج نمایید.</p>

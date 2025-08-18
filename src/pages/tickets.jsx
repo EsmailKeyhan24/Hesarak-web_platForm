@@ -1,191 +1,320 @@
-// import React, { useEffect } from "react";
-// import { useState } from "react";
-// export default function About() {
-//     const [tickets, setTickets] = useState([]);
-//     const [loading, setLoading] = useState(true);
-//     const [error, setError] = useState(null);
-//     useEffect(() => {
-//         const token = localStorage.getItem("token"); // توکن رو از localStorage بخون
-//         fetch('https://hesarak-backend.vercel.app/api/user/tickets', {
-//             method: 'GET',
-//             headers: {
-//                 "Content-Type": "application/json",
-//                 "Authorization": `Bearer ${token}` // فرستادن توکن برای احراز هویت
-//             }
-//         })
-//             .then(async (res) => {
-//                 if (!res.ok) {
-//                     throw new Error(`خطا: ${res.status}`);
-//                 }
-//                 return res.json()
-//             })
-//             .then(data => {
-//                 setTickets(data.data.tickets);
-//                 console.log(data.data.tickets)
-//             })
-//             .catch((err) => {
-//                 setError(err.message);
-//             })
-//             .finally(() => {
-//                 setLoading(false);
-//             });
-//     }, [])
-//     if (loading) return <p>در حال بارگذاری...</p>;
-//     if (error) return <p>خطا: {error}</p>;
+// import { useUser } from "../context/UserContext.jsx";
+// import { useRef, useState, useEffect } from "react";
+// import { FaLocationDot } from "react-icons/fa6";
+// import { GiThrustBend } from "react-icons/gi";
+// import { RiWheelchairFill } from "react-icons/ri";
+// import { HiMiniCalendarDateRange } from "react-icons/hi2";
+// import { PiListNumbersFill } from "react-icons/pi";
+// import { GiMoneyStack } from "react-icons/gi";
+// import { RiDownloadCloudFill } from "react-icons/ri";
+// import { WiTime1 } from "react-icons/wi";
+// import { GiDuration } from "react-icons/gi";
+// import { BsBusFront } from "react-icons/bs";
 
-//     return (
-//         <section className="w-full mt-[65px] min-h-[100vh] pt-[30px]">
-//             <div className="container lg:w-[80%] mx-auto">
-//                 <div className="md:w-[400px] border mx-auto">
-//                     <h2 className="font-ShabnamBold bg-DarkGray text-white px-[20px] py-[4px] rounded-md"> تکت‌های من</h2>
-//                     <ul>
-//                         {tickets.length > 0 ? (
-//                             tickets.map((ticket, index) => (
-//                                 <li key={index} className="flex flex-wrap mt-[10px] w-full">
-//                                     <div className="w-full ">
-//                                         <strong className="font-ShabnamBold">مقصد من: </strong>
-//                                         <span className="font-ShabnamLight">{ticket.trip.name}</span>
-//                                     </div>
-//                                     <div className="w-[50%] text-[11px] mt-[10px]">
-//                                         <strong className="font-ShabnamBold">محل حرکت: </strong>
-//                                         <span className="font-ShabnamLight">{ticket.trip.from.name}</span>
-//                                     </div>
-//                                     <div className="w-[50%] text-[11px] mt-[10px]">
-//                                         <strong className="font-ShabnamBold">پایان سفر: </strong>
-//                                         <span className="font-ShabnamLight">{ticket.trip.to.address}</span>
-//                                     </div>
-//                                     <div className="w-[50%] text-[11px] mt-[10px]">
-//                                          <strong> چـوکی های مــن: </strong>
-//                                          {ticket.booking.seats.map(seat => seat.seatNumber).join(", ")}
-//                                     </div>
-//                                     <div className="w-[50%] text-[11px] mt-[10px]">
-//                                         <strong>تاریخ:</strong>
-//                                          {ticket.booking.date} |{" "}
-//                                      </div>
+// import dayjs from "dayjs";
+// import jalali from "jalali-dayjs";
+// dayjs.extend(jalali);
 
-//                                      <div className="w-[50%] text-[11px] mt-[10px]">
-//                                         <strong>ساعت حرکت:</strong>
-//                                          {ticket.trip.departureTime} 
-//                                      </div>
-//                                      <div className="w-[50%] text-[11px] mt-[10px]">
-//                                         <strong>ساعت رسید:</strong>
-//                                          {ticket.trip.arrivalTime} 
-//                                      </div>
-//                                      <div className="w-[50%] text-[11px] mt-[10px]">
-//                                         <strong> مدت ساعات سفر :</strong>
-//                                          {ticket.trip.duration} 
-//                                      </div>
-//                                      <div className="w-[50%] text-[11px] mt-[10px]">
-//                                         <strong> شماره بس   :</strong>
-//                                          {ticket.trip.bus.number} 
-//                                      </div>
-//                                      <div className="w-[50%] text-[11px] mt-[10px]">
-//                                         <strong>  نوعیت بس   :</strong>
-//                                          {ticket.trip.bus.type.name} 
-//                                      </div>
-//                                      <div className="w-[50%] text-[11px] mt-[10px]">
-//                                         <strong>هزینه فی چوکی:</strong>
-//                                          {ticket.booking.pricePerSeat} 
-//                                      </div>
-//                                      <div className="w-[50%] text-[11px] mt-[10px]">
-//                                         <strong> هزینه مجموع تکت ها: </strong>
-//                                          <span >{ticket.booking.totalPrice} </span>
-//                                      </div>
-//                                      <div className="w-[50%] text-[11px] mt-[10px]">
-//                                         <strong> هزینه تکت: </strong>
-//                                          <span >{ticket.status.isPaid ? "پرداخت شده" : "پرداخت نشده❌"} </span>
-//                                      </div>
-//                                 </li>
-//                             ))
-//                         ) : (
-//                             <p>هیچ تکتی ثبت نشده است.</p>
-//                         )}
-//                     </ul>
+
+
+// export default function Tickets() {
+//   const { user, setUser } = useUser();
+//   console.log(user)
+//   const [tickets, setTickets] = useState([]);
+//   const ticketRefs = useRef({});
+
+//   useEffect(() => {
+//     fetch("https://hesarak-backend.vercel.app/api/user/tickets", {
+//       credentials: "include",
+//     })
+//       .then((res) => res.json())
+//       .then((data) => setTickets(data.data.tickets))
+//       .catch((err) => console.error(err));
+//   }, []);
+
+//   const toPersianDigits = (str) =>
+//     str.toString().replace(/\d/g, (d) => "۰۱۲۳۴۵۶۷۸۹"[d]);
+
+//   const handleDownloadPNG = (ticketId) => {
+//     const element = ticketRefs.current[ticketId];
+//     if (!element) return;
+
+//     import("html2canvas").then(({ default: html2canvas }) => {
+//       html2canvas(element, { scale: 2 }).then((canvas) => {
+//         const link = document.createElement("a");
+//         link.download = `ticket-${ticketId}.png`;
+//         link.href = canvas.toDataURL("image/png");
+//         link.click();
+//       });
+//     });
+//   };
+
+//   return (
+//     <section className="w-full mt-[65px] min-h-[100vh] pt-[30px] bg-gray-100">
+//       <div className="container lg:w-[80%] mx-auto">
+//         <h2 className="font-ShabnamBold text-2xl text-center text-gray-800 mb-6">
+//           🎫 تکت‌های من
+//         </h2>
+
+//         {tickets.length > 0 ? (
+//           <div className="flex flex-col gap-6">
+//             {tickets.map((ticket) => (
+//               <div
+//                 key={ticket._id}
+//                 ref={(el) => (ticketRefs.current[ticket._id] = el)}
+//                 className="bg-white p-5 rounded-xl shadow-md border border-gray-200 w-full max-w-md mx-auto"
+//               >
+//                 <div className="flex justify-between items-center mb-3">
+//                   <span className="text-sm font-ShabnamLight text-gray-500">
+//                     شماره تکت
+//                   </span>
+//                   <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-md">
+//                     {ticket.ticketNumber}
+//                   </span>
 //                 </div>
-//             </div>
-//         </section>
-//     )
+
+//                 <h3 className="font-ShabnamBold text-lg text-gray-800 mb-3">
+//                   {ticket.trip.name}
+//                 </h3>
+
+//                 {user ? (
+//         <>
+//           <p>ID: {user.id}</p>
+//           <p>نام: {user.name}</p>
+//           <p>ایمیل: {user.email}</p>
+//         </>
+//       ) : (
+//         <p>هیچ کاربری وارد نشده ❌</p>
+//       )}
+//                 <div className="space-y-1 text-sm font-ShabnamLight bg-gray-200 p-3 rounded-md">
+//                   <p className="font-ShabnamBold my-[4px] flex"><FaLocationDot className="text-[25px] ml-[10px]"/> محل حرکت: <span className="font-ShabnamLight text-[11px]">{ticket.trip.from.name}</span></p>
+//                   <p className="font-ShabnamBold my-[4px] flex"><GiThrustBend  className="text-[25px] ml-[10px]"/>پایان سفر: <span className="font-ShabnamLight text-[11px]">{ticket.trip.to.address}</span></p>
+//                   <p className="font-ShabnamBold my-[4px] flex"><RiWheelchairFill className="text-[25px] ml-[10px]" /> چوکی‌ها: <span className="font-ShabnamLight text-[11px]">{ticket.booking.seats.map((s) => s.seatNumber).join(", ")}</span></p>
+//                   <p className="font-ShabnamBold my-[4px] flex"><HiMiniCalendarDateRange  className="text-[25px] ml-[10px]"/> تاریخ: <span className="font-ShabnamLight text-[11px]">
+//                     {toPersianDigits(dayjs(ticket.booking.date).locale('fa').format("YYYY/MM/DD"))}</span>
+//                   </p>
+//                   <p className="font-ShabnamBold my-[4px] flex"><WiTime1  className="text-[25px] ml-[10px]"/> حرکت: <span className="font-ShabnamLight text-[11px]">{ticket.trip.departureTime || "نامشخص"}</span></p>
+//                   <p className="font-ShabnamBold my-[4px] flex"><GiDuration  className="text-[25px] ml-[10px]"/> مدت سفر: <span className="font-ShabnamLight text-[11px]">{ticket.trip.duration}</span></p>
+//                   <p className="font-ShabnamBold my-[4px] flex"><PiListNumbersFill  className="text-[25px] ml-[10px]"/> شماره بس: <span className="font-ShabnamLight text-[11px]">{ticket.trip.bus.number}</span></p>
+//                   <p className="font-ShabnamBold my-[4px] flex"><BsBusFront  className="text-[25px] ml-[10px]"/> نوعیت: <span className="font-ShabnamLight text-[11px]">{ticket.trip.bus.type.name}</span></p>
+//                   <p className="font-ShabnamBold my-[4px] flex"><GiMoneyStack className="text-[25px] ml-[10px]" /> فی چوکی: <span className="font-ShabnamLight text-[11px]">{ticket.booking.pricePerSeat}</span> افغانی</p>
+//                   <p className="font-ShabnamBold my-[4px]"><span className="text-[25px] ml-[10px]">💰</span> مجموع: <span className="font-ShabnamLight text-[11px]">{ticket.booking.totalPrice}</span> افغانی</p>
+//                 </div>
+
+//                 <div className="mt-3 flex justify-between items-center text-[10px]">
+//                   <span
+//                     className={`min-w-[120px] h-[30px] flex items-center justify-center rounded-full px-[9px] font-ShabnamBold leading-none ${
+//                       ticket.status.isPaid ? "bg-DarkGray text-white" : "bg-DarkGray text-white"}`}>
+//                     هزینه سفر {ticket.status.isPaid ? "پرداخت شده ✅" : "❌ پرداخت نشده ❌"}
+//                   </span>
+
+//                   <button
+//                     onClick={() => handleDownloadPNG(ticket._id)}
+//                     className="w-[120px] h-[30px] bg-blue-500 text-white rounded hover:bg-blue-600 text-sm flex justify-center items-center font-ShabnamBold leading-none">
+//                     <RiDownloadCloudFill className="text-[22px] mx-[6px]"/> دانلود 
+//                   </button>
+//                 </div>
+//               </div>
+//             ))}
+//           </div>
+//         ) : (
+//           <p className="text-center text-gray-500">هیچ تکتی ثبت نشده است.</p>
+//         )}
+//       </div>
+//     </section>
+//   );
 // }
 
 
 
 
-import React, { useEffect, useState } from "react";
+import { useUser } from "../context/UserContext.jsx";
+import { useRef, useState, useEffect } from "react";
+import { FaLocationDot } from "react-icons/fa6";
+import { GiThrustBend } from "react-icons/gi";
+import { RiWheelchairFill } from "react-icons/ri";
+import { HiMiniCalendarDateRange } from "react-icons/hi2";
+import { PiListNumbersFill } from "react-icons/pi";
+import { GiMoneyStack } from "react-icons/gi";
+import { RiDownloadCloudFill } from "react-icons/ri";
+import { WiTime1 } from "react-icons/wi";
+import { GiDuration } from "react-icons/gi";
+import { BsBusFront } from "react-icons/bs";
+
+
+import dayjs from "dayjs";
+import jalali from "jalali-dayjs";
+dayjs.extend(jalali);
 
 export default function Tickets() {
+  const { user, isLoggedIn } = useUser();
   const [tickets, setTickets] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true); // 👈 حالت لودینگ
+  const ticketRefs = useRef({});
 
   useEffect(() => {
-    const token = localStorage.getItem("token");
     fetch("https://hesarak-backend.vercel.app/api/user/tickets", {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
-      },
+      credentials: "include",
     })
-      .then(async (res) => {
-        if (!res.ok) {
-          throw new Error(`خطا: ${res.status}`);
-        }
-        return res.json();
-      })
+      .then((res) => res.json())
       .then((data) => {
         setTickets(data.data.tickets);
+        setLoading(false); // 👈 بعد از لود شدن
       })
       .catch((err) => {
-        setError(err.message);
-      })
-      .finally(() => {
-        setLoading(false);
+        console.error(err);
+        setLoading(false); // 👈 حتی اگر خطا آمد هم لودینگ قطع شود
       });
   }, []);
 
-  if (loading) return <p className="text-center mt-10">در حال بارگذاری...</p>;
-  if (error) return <p className="text-center text-red-500 mt-10">خطا: {error}</p>;
+  const toPersianDigits = (str) =>
+    str.toString().replace(/\d/g, (d) => "۰۱۲۳۴۵۶۷۸۹"[d]);
 
+  const handleDownloadPNG = (ticketId) => {
+    const element = ticketRefs.current[ticketId];
+    if (!element) return;
+
+    import("html2canvas").then(({ default: html2canvas }) => {
+      html2canvas(element, { scale: 2 }).then((canvas) => {
+        const link = document.createElement("a");
+        link.download = `ticket-${ticketId}.png`;
+        link.href = canvas.toDataURL("image/png");
+        link.click();
+      });
+    });
+  };
+
+  if (!isLoggedIn) return <p>لطفاً وارد شوید</p>;
   return (
-    <section className="w-full mt-[65px] min-h-[100vh] pt-[30px]">
+    <section className="w-full mt-[65px] min-h-[100vh] pt-[30px] bg-gray-100">
       <div className="container lg:w-[80%] mx-auto">
         <h2 className="font-ShabnamBold text-2xl text-center text-gray-800 mb-6">
-          🎫 تکت‌های من
+            🎫 تکت‌های {user?.name}
         </h2>
-        {tickets.length > 0 ? (
-          <div>
-            {tickets.map((ticket, index) => (
-              <div key={index} className="bg-white shadow-md rounded-xl p-5 border border-gray-200 hover:shadow-lg transition-shadow w-[350px] mx-auto my[10px]">
+        {loading ? ( // 👈 نمایش متن لودینگ
+          <p className="text-center text-gray-500">در حال بارگذاری تکت‌های شما...</p>
+        ) : tickets.length > 0 ? (
+          <div className="flex flex-col gap-6">
+            {tickets.map((ticket) => (
+              <div
+                key={ticket._id}
+                ref={(el) => (ticketRefs.current[ticket._id] = el)}
+                className="bg-white p-5 rounded-xl shadow-md border border-gray-200 w-full max-w-md mx-auto"
+              >
                 <div className="flex justify-between items-center mb-3">
-                  <span className="text-sm font-ShabnamLight text-gray-500">شماره تکت</span>
-                  <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-md">{ticket.ticketNumber}</span>
+                  <span className="text-sm font-ShabnamLight text-gray-500">
+                    شماره تکت
+                  </span>
+                  <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-md">
+                    {ticket.ticketNumber}
+                  </span>
                 </div>
 
-                <h3 className="font-ShabnamBold text-lg text-gray-800 mb-2">{ticket.trip.name}</h3>
+                <h3 className="font-ShabnamBold text-lg text-gray-800 mb-3">
+                  {ticket.trip.name}
+                </h3>
 
-                <div className="space-y-1 text-sm font-ShabnamLight text-white mx-auto bg-DarkGray p-[10px] rounded-md">
-                  <p className="font-ShabnamBold my-[4px]">📍 محل حرکت: <span className="font-ShabnamLight text-[11px]">{ticket.trip.from.name}</span></p>
-                  <p className="font-ShabnamBold my-[4px]">🏁 پایان سفر: <span className="font-ShabnamLight text-[11px]">{ticket.trip.to.address}</span></p>
-                  <p className="font-ShabnamBold my-[4px]">💺 چوکی‌ها: <span className="font-ShabnamLight text-[11px]">{ticket.booking.seats.map((s) => s.seatNumber).join(", ")}</span></p>
-                  <p className="font-ShabnamBold my-[4px]">📅 تاریخ: <span className="font-ShabnamLight text-[11px]">{ticket.booking.date}</span></p>
-                  <p className="font-ShabnamBold my-[4px]">🕒 حرکت: <span className="font-ShabnamLight text-[11px]">{ticket.trip.departureTime || "نامشخص"}</span></p>
-                  <p className="font-ShabnamBold my-[4px]">⏳ مدت سفر: <span className="font-ShabnamLight text-[11px]">{ticket.trip.duration}</span></p>
-                  <p className="font-ShabnamBold my-[4px]">🚌 شماره بس: <span className="font-ShabnamLight text-[11px]">{ticket.trip.bus.number}</span></p>
-                  <p className="font-ShabnamBold my-[4px]">🚍 نوعیت: <span className="font-ShabnamLight text-[11px]">{ticket.trip.bus.type.name}</span></p>
-                  <p className="font-ShabnamBold my-[4px]">💵 فی چوکی: <span className="font-ShabnamLight text-[11px]">{ticket.booking.pricePerSeat}</span> افغانی</p>
-                  <p className="font-ShabnamBold my-[4px]">💰 مجموع: <span className="font-ShabnamLight text-[11px]">{ticket.booking.totalPrice}</span> افغانی</p>
+                {user ? (
+                  <>
+                    <p>ID: {user.id}</p>
+                    <p>نام: {user.name}</p>
+                    <p>ایمیل: {user.email}</p>
+                  </>
+                ) : (
+                  <p>هیچ کاربری وارد نشده ❌</p>
+                )}
+
+                <div className="space-y-1 text-sm font-ShabnamLight bg-gray-200 p-3 rounded-md">
+                  <p className="font-ShabnamBold my-[4px] flex">
+                    <FaLocationDot className="text-[25px] ml-[10px]" /> محل حرکت:{" "}
+                    <span className="font-ShabnamLight text-[11px]">
+                      {ticket.trip.from.name}
+                    </span>
+                  </p>
+                  <p className="font-ShabnamBold my-[4px] flex">
+                    <GiThrustBend className="text-[25px] ml-[10px]" />
+                    پایان سفر:{" "}
+                    <span className="font-ShabnamLight text-[11px]">
+                      {ticket.trip.to.address}
+                    </span>
+                  </p>
+                  <p className="font-ShabnamBold my-[4px] flex">
+                    <RiWheelchairFill className="text-[25px] ml-[10px]" /> چوکی‌ها:{" "}
+                    <span className="font-ShabnamLight text-[11px]">
+                      {ticket.booking.seats.map((s) => s.seatNumber).join(", ")}
+                    </span>
+                  </p>
+                  <p className="font-ShabnamBold my-[4px] flex">
+                    <HiMiniCalendarDateRange className="text-[25px] ml-[10px]" />{" "}
+                    تاریخ:{" "}
+                    <span className="font-ShabnamLight text-[11px]">
+                      {toPersianDigits(
+                        dayjs(ticket.booking.date)
+                          .locale("fa")
+                          .format("YYYY/MM/DD")
+                      )}
+                    </span>
+                  </p>
+                  <p className="font-ShabnamBold my-[4px] flex">
+                    <WiTime1 className="text-[25px] ml-[10px]" /> حرکت:{" "}
+                    <span className="font-ShabnamLight text-[11px]">
+                      {ticket.trip.departureTime || "نامشخص"}
+                    </span>
+                  </p>
+                  <p className="font-ShabnamBold my-[4px] flex">
+                    <GiDuration className="text-[25px] ml-[10px]" /> مدت سفر:{" "}
+                    <span className="font-ShabnamLight text-[11px]">
+                      {ticket.trip.duration}
+                    </span>
+                  </p>
+                  <p className="font-ShabnamBold my-[4px] flex">
+                    <PiListNumbersFill className="text-[25px] ml-[10px]" /> شماره بس:{" "}
+                    <span className="font-ShabnamLight text-[11px]">
+                      {ticket.trip.bus.number}
+                    </span>
+                  </p>
+                  <p className="font-ShabnamBold my-[4px] flex">
+                    <BsBusFront className="text-[25px] ml-[10px]" /> نوعیت:{" "}
+                    <span className="font-ShabnamLight text-[11px]">
+                      {ticket.trip.bus.type.name}
+                    </span>
+                  </p>
+                  <p className="font-ShabnamBold my-[4px] flex">
+                    <GiMoneyStack className="text-[25px] ml-[10px]" /> فی چوکی:{" "}
+                    <span className="font-ShabnamLight text-[11px]">
+                      {ticket.booking.pricePerSeat}
+                    </span>{" "}
+                    افغانی
+                  </p>
+                  <p className="font-ShabnamBold my-[4px]">
+                    <span className="text-[25px] ml-[10px]">💰</span> مجموع:{" "}
+                    <span className="font-ShabnamLight text-[11px]">
+                      {ticket.booking.totalPrice}
+                    </span>{" "}
+                    افغانی
+                  </p>
                 </div>
 
-                <div className="mt-4">
+                <div className="mt-3 flex justify-between items-center text-[10px]">
                   <span
-                    className={`px-3 py-1 rounded-full text-sm font-ShabnamBold ${
+                    className={`min-w-[120px] h-[30px] flex items-center justify-center rounded-full px-[9px] font-ShabnamBold leading-none ${
                       ticket.status.isPaid
-                        ? "bg-green-100 text-green-700"
-                        : "bg-red-100 text-red-700"
+                        ? "bg-DarkGray text-white"
+                        : "bg-DarkGray text-white"
                     }`}
                   >
-                   هزینه سفر {ticket.status.isPaid ? "پرداخت شده ✅" : "❌ پرداخت نشده ❌"}
+                    هزینه سفر{" "}
+                    {ticket.status.isPaid
+                      ? "پرداخت شده ✅"
+                      : "❌ پرداخت نشده ❌"}
                   </span>
+
+                  <button
+                    onClick={() => handleDownloadPNG(ticket._id)}
+                    className="w-[120px] h-[30px] bg-blue-500 text-white rounded hover:bg-blue-600 text-sm flex justify-center items-center font-ShabnamBold leading-none"
+                  >
+                    <RiDownloadCloudFill className="text-[22px] mx-[6px]" /> دانلود
+                  </button>
                 </div>
               </div>
             ))}
@@ -197,6 +326,3 @@ export default function Tickets() {
     </section>
   );
 }
-
-// // https://hesarak-backend.vercel.app/api/user/tickets
-// //https://chatgpt.com/c/6899bda0-7f7c-8323-b756-9d46a26529fd

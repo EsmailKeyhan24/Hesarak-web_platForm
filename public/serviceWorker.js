@@ -34,9 +34,9 @@ self.addEventListener("install", evt => {
         return (
           res ||
           fetch(evt.request).catch(() => {
-            if (evt.request.mode === "navigate" > -1) {
-              return caches.match("/index.html");
-            }
+            if (evt.request.mode === "navigate") {
+		  return caches.match("/index.html");
+	    }
           })
         );
       })
