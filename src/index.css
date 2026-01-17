@@ -4,3 +4,24 @@
 body{
     direction: rtl;
 }
+@layer utilities {
+    .h-custom {
+      @apply h-[calc(100vh-65px)];
+    }
+
+
+    .custom-neomorphic-shadow {
+        box-shadow: 
+          -8px -8px 7px #f3f4f6,
+          15px 15px 15px rgba(0, 0, 0, 0.1),
+          inset -10px -10px 10px rgba(255, 255, 255, 0.2),
+          inset 15px 15px 15px rgba(0, 0, 0, 0.1);
+      }
+    .custom-neomorphic-shadow_social {
+        box-shadow: 
+          -1px -1px 7px #ceced19e,
+          inset  3px 3px 5px black,
+          inset  -3px -3px 5px black;
+          border:5px solid #333;
+      }
+}

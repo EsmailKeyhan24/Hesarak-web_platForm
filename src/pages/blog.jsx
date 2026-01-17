@@ -1,6 +1,13 @@
 import React  from "react";
+import BlogPost from "../components/blogApi";
 export default function Blog(){
     return(
-        <h2>This is Blog page</h2>
+        <section className="w-full mt-[65px]">
+            <section className="w-full py-[70px]">
+                <div className="container mx-auto px-[20px] lg:px-0">
+                    <BlogPost />
+                </div>
+            </section>
+        </section>
     )
 }
